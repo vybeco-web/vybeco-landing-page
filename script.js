@@ -1,6 +1,6 @@
 // ===== CONFIGURATION =====
 const CONFIG = {
-    businessWhatsApp: "60123456789", // GANTI DENGAN NOMOR KAU
+    businessWhatsApp: "60194124033", // GANTI DENGAN NOMOR KAU
     businessName: "VybeCo Resources",
     promoEndDate: "2025-09-30", // Format: YYYY-MM-DD
     companyEmail: "contact@vybeco.com"
