@@ -1,75 +1,95 @@
 // js/products-data.js
-const CATEGORY_ORDER = [
-  ['refrigerator','Refrigerator'],
-  ['water-purifier','Water Purifier'],
-  ['air-purifier','Air Purifier'],
-  ['washer','Washer'],
-  ['dryer','Dryer'],
-  ['washtower','WashTower'],
-  ['aircon','Air Conditioner'],
-  ['tv','TV'],
-  ['soundbar','Soundbar'],
-  ['styler','Styler'],
-  ['dishwasher','Dishwasher'],
-  ['vacuum','Vacuum'],
-  ['dehumidifier','Dehumidifier'],
-];
+// 42 PRODUK + CATEGORY ORDER + ICONS
 
 const ICONS = {
-  refrigerator:'Ice Cube', 'water-purifier':'Droplet', 'air-purifier':'Wind Face', washer:'Washing Machine', dryer:'Sun Behind Cloud',
-  washtower:'Washing Machine', aircon:'Snowflake', tv:'Television', soundbar:'Speaker High Volume', styler:'Shirt',
-  dishwasher:'Plate with Cutlery', vacuum:'Broom', dehumidifier:'Wind Face'
+  'refrigerator': '❄️',
+  'water-purifier': '💧',
+  'air-purifier': '🌬️',
+  'washer': '🧺',
+  'dryer': '🔥',
+  'tv': '📺',
+  'aircond': '❄️',
+  'styler': '👔',
+  'dishwasher': '🍽️',
+  'vacuum': '🧹',
+  'dehumidifier': '💨'
 };
 
-const STREET_PICKS = ['GC-L257KQKR','WU525BS','AS10GDBYO','FV1450S2W','S3-Q09JAPPA','OLED65C3PSA','DFC533FV'];
-const CREW_PICKS = ['GC-L257KQKR','S3-Q09JAPPA','DFC533FV'];
-
-const PRODUCTS = [
-  // === 27 PRODUK DARI KAU (100% COPY-PASTE) ===
-  {cat:'refrigerator',model:'GC-L257KQKR',name:'641L Side-by-Side',poster:'assets/img/refrigerator/GC-L257KQKR.jpg',price:'RM110 / bulan',normal:'RM220 / bulan',badge:'Popular',desc:'Peti sejuk side-by-side besar dengan ice & water dispenser – sesuai untuk keluarga yang suka simpan stok makanan dan minuman.',specs:['Smart Inverter Compressor untuk penjimatan tenaga & operasi senyap.','LinearCooling+ & Multi Air Flow membantu kekalkan suhu sekata supaya sayur & lauk tahan lebih lama.','UVnano® Water Dispenser dan pembuat ais automatik untuk air dan ais yang lebih bersih.','Kapasiti 641L – muat barangan mingguan seisi keluarga.'],benefits:['Tak perlu beli penapis air atau ice maker berasingan – semua dalam satu.','Kurang risiko makanan cepat rosak kerana suhu lebih stabil.','Reka bentuk moden sesuai dapur apartment atau rumah landed.']},
-  {cat:'refrigerator',model:'GC-J257SQNW',name:'Side-by-Side UVnano',poster:'assets/img/refrigerator/GC-J257SQNW.jpg',price:'RM130 / bulan',normal:'RM260 / bulan',badge:'Premium',desc:'Side-by-side dengan UVnano dispenser & Hygiene Fresh+ – fokus kepada kebersihan dan bau yang lebih segar.',specs:['UVnano® automatik menyinarkan UV pada nozzle air untuk kurangkan bakteria.','Hygiene Fresh+ filter membantu menapis bau dan bakteria di dalam ruang peti.','Door-in-Door memudahkan capai minuman & snek tanpa buka pintu penuh.'],benefits:['Kurang bau “campur” dalam peti – bau ikan tidak ganggu kek & buah.','Akses pantas ke barang harian mengurangkan pembaziran tenaga.','Sesuai untuk keluarga yang mementingkan kebersihan makanan.']},
-  {cat:'refrigerator',model:'GN-F452PQAK',name:'Top Freezer + Water Dispenser',poster:'assets/img/refrigerator/GN-F452PQAK.jpg',price:'RM80 / bulan',normal:'RM160 / bulan',desc:'Peti sejuk top-freezer dengan dispenser air terbina dalam – pilihan bajet tanpa kompromi fungsi harian.',specs:['DoorCooling+ membantu sejukkan bahagian pintu dengan lebih sekata.','Water dispenser terbina – air sejuk sentiasa tersedia.','Reka bentuk kompak dengan kapasiti cukup untuk keluarga kecil.'],benefits:['Jimat ruang & elektrik, sesuai untuk apartment.','Tak perlu beli water jug asing yang ambil ruang.','Harga langganan lebih rendah tetapi fungsi masih lengkap.']},
-  {cat:'water-purifier',model:'WU525BS',name:'Tankless Hot & Cold',poster:'assets/img/water-purifier/WU525BS.jpg',price:'RM140 / bulan',normal:'RM280 / bulan',badge:'OHSEM',desc:'Penapis air tanpa tangki dengan air panas dan sejuk on-demand – sesuai untuk keluarga yang banyak guna air minum setiap hari.',specs:['Sistem penapisan berlapis (sediment, carbon, RO, post-carbon) membantu menapis kotoran, klorin dan logam berat.','Reka bentuk tanpa tangki mengurangkan risiko air bertakung.','Fungsi steril automatik untuk paip dan nozzle.'],benefits:['Air lebih bersih untuk minum, buat kopi, susu anak dan memasak.','Tak perlu beli air mineral botol berat dan mahal.','Servis penukaran filter & pemeriksaan berkala termasuk dalam langganan.']},
-  {cat:'water-purifier',model:'WD518AN',name:'Compact Tankless',poster:'assets/img/water-purifier/WD518AN.jpg',price:'RM90 / bulan',normal:'RM180 / bulan',desc:'Penapis air kompak tanpa tangki – sesuai untuk dapur kecil atau rumah sewa.',specs:['Saiz kecil, mudah muat di atas meja dapur.','Penapisan berlapis dengan indikator tukar filter.','Pilihan suhu bilik / sejuk (bergantung model).'],benefits:['Upgrade besar dari water jug biasa tetapi masih jimat ruang.','Tak perlu fikir jadual tukar filter – LG akan ingatkan & datang servis.','Sesuai untuk pasangan muda atau individu bujang yang mahukan air bersih setiap hari.']},
-  {cat:'air-purifier',model:'AS10GDBYO',name:'360° Dual Booster',poster:'assets/img/air-purifier/AS10GDBYO.jpg',price:'RM135 / bulan',normal:'RM270 / bulan',badge:'Hit Model',desc:'Penapis udara 360° bersaiz besar dengan booster – fokus untuk ruang tamu & keluarga yang ada alergi.',specs:['Penapisan HEPA + deodorisation untuk habuk halus, PM2.5 & bau.','Booster atas membantu edarkan udara bersih dengan lebih pantas.','Sensor PM1.0 & paparan warna kualiti udara.'],benefits:['Kurangkan bersin pagi, terutama untuk mereka yang alergi habuk.','Rumah kurang bau masakan & rokok yang melekat.','Sesuai untuk ruang tamu utama atau ruang keluarga besar.']},
-  {cat:'air-purifier',model:'AS60GHWGO',name:'360° Air Purifier',poster:'assets/img/air-purifier/AS60GHWGO.jpg',price:'RM70 / bulan',normal:'RM140 / bulan',desc:'Model pertengahan dengan 360° penapisan – cukup untuk ruang tamu atau bilik utama.',specs:['Penapis berlapis dengan HEPA & deodorising filter.','Mode senyap untuk digunakan ketika tidur.','Indikator kualiti udara secara real-time.'],benefits:['Udara rumah lebih bersih dan nyaman, terutamanya untuk bayi dan warga emas.','Kurang habuk di permukaan perabot.','Senang difahami – lampu tukar ikut kualiti udara.']},
-  {cat:'air-purifier',model:'AS20GPBK0',name:'AeroFurniture',poster:'assets/img/air-purifier/AS20GPBK0.jpg',price:'RM80 / bulan',normal:'RM160 / bulan',desc:'Meja sisi + penapis udara dalam satu – untuk mereka yang mahukan fungsi & gaya dalam satu produk.',specs:['Reka bentuk seperti meja kecil dengan penapisan udara di dalamnya.','Penapisan debu halus & alergen.','Sesuai diletak di sisi sofa atau katil.'],benefits:['Jimat ruang, tak perlu mesin besar di lantai.','Nampak estetik – tetamu tak sedar pun ia penapis udara.','Sesuai untuk condo / bilik kerja kecil.']},
-  {cat:'washer',model:'FV1450S2W',name:'Front Load 10.5kg',poster:'assets/img/washer/FV1450S2W.jpg',price:'RM100 / bulan',normal:'RM200 / bulan',badge:'OHSEM',desc:'Mesin basuh front load 10.5kg dengan AI DD – sesuai keluarga 3–5 orang.',specs:['AI DD™ memilih corak basuhan ikut jenis fabrik untuk kurangkan kerosakan kain.','TurboWash™ 360 mengurangkan masa basuh tetapi masih bersih.','Steam+ membantu kurangkan alergen pada pakaian.'],benefits:['Basuh lebih cepat tanpa perlu ulang banyak kali.','Baju sekolah & pakaian harian lebih lembut dan tahan lama.','Sesuaikan program untuk keluarga yang sibuk bekerja.']},
-  {cat:'washer',model:'F2520SNEKR',name:'Front Load 20kg',poster:'assets/img/washer/F2520SNEKR.jpg',price:'RM150 / bulan',normal:'RM300 / bulan',desc:'Mesin basuh kapasiti besar 20kg – untuk keluarga besar atau yang selalu basuh comforter.',specs:['Drum besar muat comforter & load besar sekali gus.','Inverter motor yang lebih jimat tenaga.','Pelbagai program termasuk mode hygiene & bulky.'],benefits:['Kurangkan trip ke kedai dobi.','Jimat masa – lebih banyak pakaian siap sekali basuh.','Sesuai untuk rumah yang selalu menerima tetamu / keluarga ramai.']},
-  {cat:'dryer',model:'VD-H9066WSR',name:'Heat Pump Dryer 9kg',poster:'assets/img/dryer/VD-H9066WSR.jpg',price:'RM110 / bulan',normal:'RM220 / bulan',desc:'Dryer heat pump 9kg – keringkan pakaian dengan lebih lembut dan jimat elektrik.',specs:['Heat Pump Dryer menggunakan suhu lebih rendah berbanding dryer tradisional.','Sensor kering automatik untuk elak over-dry.','Program Allergy Care membantu kurangkan alergen dalam pakaian.'],benefits:['Tak perlu bergantung pada cuaca untuk keringkan pakaian.','Kurang risiko pakaian mengecut atau rosak.','Sesuai untuk keluarga dengan bayi & kanak-kanak.']},
-  {cat:'washtower',model:'WT2520MHGER',name:'WashTower AI DD',poster:'assets/img/washtower/WT2520MHGER.jpg',price:'RM280 / bulan',normal:'RM560 / bulan',badge:'Premium',desc:'Gabungan washer + dryer dalam satu menara kompak – ideal untuk condo & rumah sempit.',specs:['Washer & Dryer disusun menegak dengan Center Control di tengah.','AI DD & TurboWash pada bahagian washer.','Heat pump dryer menjimatkan tenaga.'],benefits:['Jimat ruang kerana hanya satu footprint di lantai.','Tampil sangat moden – nampak macam laundry studio.','Sesuai untuk keluarga yang mahu set laundry all-in-one.']},
-  {cat:'aircon',model:'S3-Q09JAPPA',name:'DUALCOOL 1.0HP',poster:'assets/img/aircon/S3-Q09JAPPA.jpg',price:'RM80 / bulan',normal:'RM160 / bulan',desc:'Aircond inverter 1.0HP – cukup untuk bilik tidur standard.',specs:['DUAL Inverter Compressor membantu jimat tenaga.','Penyejukan pantas dan lebih senyap.','Penapis membantu kurangkan habuk dan alergen.'],benefits:['Tidur lebih selesa tanpa bunyi kuat.','Bil elektrik lebih terkawal berbanding non-inverter.','Sesuai untuk bilik anak / bilik kerja.']},
-  {cat:'aircon',model:'S3-Q12JA3BA',name:'DUALCOOL 1.5HP',poster:'assets/img/aircon/S3-Q12JA3BA.jpg',price:'RM90 / bulan',normal:'RM180 / bulan',desc:'1.5HP untuk bilik sederhana-besar atau ruang keluarga kecil.',specs:['Fast Cooling menyejukkan bilik dengan cepat.','Allergy Filter & dehumidifying mode.','Boleh dikawal melalui aplikasi (model tertentu).'],benefits:['Sesuai untuk master bedroom atau ruang keluarga kecil.','Udara lebih bersih & nyaman.','Boleh on/off aircond sebelum sampai rumah (jika model Wi-Fi).']},
-  {cat:'aircon',model:'S3-Q24K2RPA',name:'ARTCOOL 2.0-2.5HP',poster:'assets/img/aircon/S3-Q24K2RPA.jpg',price:'RM140 / bulan',normal:'RM280 / bulan',badge:'Design',desc:'Unit ARTCOOL dengan panel kaca – gabung fungsi dan design untuk ruang utama.',specs:['Reka bentuk panel cermin berwarna gelap.','Kapasiti besar untuk ruang tamu atau ruang makan.','Inverter untuk penjimatan tenaga jangka panjang.'],benefits:['Nampak premium di dinding ruang utama rumah.','Sesuai untuk rumah dua tingkat atau ruang konsep open-plan.','Kurang bunyi walaupun digunakan lama.']},
-  {cat:'tv',model:'OLED77B5PSA',name:'77" OLED B5 4K',poster:'assets/img/tv/OLED77B5PSA.jpg',price:'RM560 / bulan',normal:'RM1120 / bulan',badge:'Cinematic',desc:'Skrin besar 77" OLED – untuk yang mahukan pengalaman home cinema sebenar.',specs:['Panel OLED dengan piksel bercahaya sendiri untuk hitam pekat.','Sokongan Dolby Vision & Dolby Atmos (bergantung sound system).','Smart webOS dengan aplikasi streaming popular.'],benefits:['Movie night rasa macam dalam cinema.','Warna dan kontras jauh lebih hidup berbanding TV biasa.','Sangat sesuai untuk ruang TV khas atau home theatre.']},
-  {cat:'tv',model:'OLED65C3PSA',name:'65" OLED C3 4K',poster:'assets/img/tv/OLED65C3PSA.jpg',price:'RM390 / bulan',normal:'RM780 / bulan',desc:'Model seimbang untuk movie & gaming dengan panel OLED evo.',specs:['Panel OLED evo lebih terang dan jelas.','Refresh rate tinggi – sesuai untuk konsol generasi baru.','Design slim dengan bezel nipis.'],benefits:['Immersion tinggi untuk gaming & movie.','Nampak premium bila wall-mounted.','Pilihan “sweet spot” antara harga dan kualiti.']},
-  {cat:'tv',model:'QNED75',name:'75" QNED 4K',poster:'assets/img/tv/QNED75.jpg',price:'RM200 / bulan',normal:'RM400 / bulan',desc:'TV besar berasaskan QNED – campuran Quantum Dot & NanoCell.',specs:['Gabungan Quantum Dot + NanoCell untuk warna lebih terang.','Local dimming membantu naikkan kontras.','Sesuai untuk tontonan harian & siaran sukan.'],benefits:['Skrin besar dengan harga langganan lebih mesra bajet.','Sesuai untuk ruang keluarga yang selalu tonton bola atau drama.','Gambar jelas walaupun ruang agak cerah.']},
-  {cat:'tv',model:'Nano83',name:'65" NanoCell 4K',poster:'assets/img/tv/Nano83.jpg',price:'RM110 / bulan',normal:'RM220 / bulan',desc:'TV 4K NanoCell mid-range untuk keluarga yang mahukan kualiti baik tanpa terlalu mahal.',specs:['Teknologi NanoCell untuk warna lebih natural.','AI Processor membantu naik taraf kandungan ke 4K.','ThinQ AI & Magic Remote memudahkan navigasi.'],benefits:['Paling sesuai sebagai TV utama di ruang tamu.','Kualiti gambar jelas untuk streaming & siaran biasa.','Remote mudah guna untuk ibu bapa dan anak-anak.']},
-  {cat:'soundbar',model:'S90QY',name:'Soundbar Dolby Atmos 5.1.3',poster:'assets/img/soundbar/S90QY.jpg',price:'RM160 / bulan',normal:'RM320 / bulan',desc:'Soundbar premium dengan Dolby Atmos – naikkan audio TV ke tahap cinema.',specs:['5.1.3 channel dengan sokongan Dolby Atmos.','WOW Synergy bila dipadankan dengan TV LG tertentu.','AI Sound Pro melaras bunyi ikut kandungan.'],benefits:['Dialog lebih jelas dan bass lebih padu berbanding speaker TV.','Pengalaman menonton movie & bola jadi jauh lebih hidup.','Sesuai digabungkan dengan OLED atau QNED besar.']},
-  {cat:'styler',model:'S3WF',name:'LG Styler TrueSteam',poster:'assets/img/styler/S3WF.jpg',price:'RM90 / bulan',normal:'RM180 / bulan',desc:'Almari stim untuk segarkan pakaian – sesuai untuk sut, jubah & tudung.',specs:['TrueSteam menggunakan wap untuk segarkan & kurangkan bau.','Moving hanger mengurangkan kedutan pada pakaian.','Program khas untuk pakaian delicate.'],benefits:['Kurangkan keperluan hantar dry-clean yang mahal.','Tudung, blazer & jubah sentiasa nampak kemas.','Sesuai untuk professional yang perlukan imej sentiasa rapi.']},
-  {cat:'dishwasher',model:'DFC533FV',name:'QuadWash TrueSteam (Prime Silver)',poster:'assets/img/dishwasher/DFC533FV.jpg',price:'RM65 / bulan',normal:'RM130 / bulan',badge:'NEW OHSEM',desc:'Mesin basuh pinggan berdiri bebas dengan TrueSteam & QuadWash – pinggan lebih bersih, kurang kesan air.',specs:['TrueSteam™ menggunakan wap tulen untuk kurangkan kesan air & bantu tanggal kotoran degil.','QuadWash™ dengan empat lengan semburan multi-arah membersih dari setiap sudut.','EasyRack™ Plus memberi susunan rak yang fleksibel, termasuk rak ketiga untuk sudu & utensil panjang.','Sokongan LG ThinQ™ – boleh semak status & tambah program melalui aplikasi.','Kapasiti besar (sekitar 14 place settings) sesuai untuk keluarga atau mereka yang banyak memasak.'],benefits:['Pinggan & gelas keluar lebih berkilau tanpa perlu sental lama.','Jimat masa selepas memasak – hanya susun, pilih program, dan biar mesin bekerja.','Kurangkan penggunaan air berbanding basuh tangan yang lama di sinki.','Sesuai untuk isi rumah yang mahu dapur sentiasa kemas dan teratur.','Langganan termasuk servis berkala & semakan kebersihan dalaman mesin.']},
-  {cat:'dishwasher',model:'DFC335HM',name:'QuadWash TrueSteam + Auto Open (Matte Black)',poster:'assets/img/dishwasher/DFC335HM.jpg',price:'RM75 / bulan',normal:'RM150 / bulan',badge:'NEW OHSEM',desc:'Versi Matte Black dengan pintu Auto Open – bantu keringkan pinggan lebih baik selepas setiap cucian.',specs:['TrueSteam™ membantu hilangkan kotoran dan mengurangkan water spots sehingga kira-kira 30%.','QuadWash™ dan Dual Zone Wash – boleh bezakan tekanan air rak atas dan bawah untuk gelas & periuk.','EasyRack™ Plus dengan rak ketiga boleh laras memberi fleksibiliti susunan.','Auto Opening Door (AOD) – pintu terbuka sedikit di akhir kitaran untuk buang wap dan keringkan pinggan dengan lebih natural.','Smart Diagnosis & ThinQ™ (bergantung pasaran) untuk bantuan teknikal dan tambah program baru.'],benefits:['Pinggan lebih kering, kurang perlu lap dengan kain selepas cycle siap.','Warna Matte Black nampak premium dan moden di dapur.','Ideal untuk mereka yang masak berat – periuk & kuali dapat cucian kuat, gelas masih dilayan lembut.','Sangat sesuai untuk keluarga sibuk yang mahukan dapur sentiasa on point.','Servis tahunan termasuk pembersihan dalaman & pelaras water softener mengikut keadaan air rumah.']},
-  {cat:'vacuum',model:'A9T-RMAX',name:'CordZero All-in-One Tower',poster:'assets/img/vacuum/A9T-RMAX.jpg',price:'RM90 / bulan',normal:'RM180 / bulan',desc:'Vacuum tanpa wayar dengan menara penyimpanan & auto dust empty – rumah lebih kemas, charging lebih tersusun.',specs:['All-in-One Tower menyimpan, mengecas dan mengosongkan habuk dalam satu unit.','PowerDrive Nozzle memberikan sedutan kuat pada lantai keras dan karpet.','Bateri boleh tukar untuk tempoh vacuum lebih panjang.'],benefits:['Tak perlu cari plug – hanya ambil dan terus vacuum.','Rumah nampak kemas kerana vacuum tersimpan dalam tower yang cantik.','Sesuai untuk rumah bertingkat dan keluarga dengan anak kecil / haiwan peliharaan.']},
-  {cat:'vacuum',model:'A9X-RSTEAM',name:'CordZero Steam Mop',poster:'assets/img/vacuum/A9X-RSTEAM.jpg',price:'RM130 / bulan',normal:'RM260 / bulan',desc:'Model yang boleh vacuum dan mop dengan stim – satu alat untuk lantai sentiasa bersih.',specs:['Steam Mop Nozzle menggabungkan sedutan & mop stim.','Mod Allergy Care membantu kurangkan kuman di lantai.','Sesuai untuk lantai jubin, vinyl dan kayu yang sesuai untuk steam.'],benefits:['Lantai rasa lebih bersih dan licin tanpa rasa melekit.','Jimat masa kerana tak perlu broom + mop berasingan.','Sesuai untuk rumah dengan bayi yang suka merangkak di lantai.']},
-  {cat:'dehumidifier',model:'DD16GMWEE',name:'Dehumidifier 16L Smart',poster:'assets/img/dehumidifier/DD16GMWEE.jpg',price:'RM70 / bulan',normal:'RM140 / bulan',desc:'Dehumidifier 16L untuk kawal kelembapan – elak bau hapak & kulapuk.',specs:['Kapasiti menyedut lembapan sehingga sekitar 16L sehari (bergantung keadaan).','Mod automatik dan sensor kelembapan.','Operasi agak senyap, sesuai untuk digunakan di bilik tidur.'],benefits:['Bilik kurang rasa lembap dan lebih selesa terutama musim hujan.','Bantu lindungi perabot kayu dan almari baju daripada fungus.','Sesuai untuk rumah tingkat bawah atau unit yang kurang cahaya matahari.']},
-  {cat:'dehumidifier',model:'DD16GME1',name:'Dehumidifier 16L',poster:'assets/img/dehumidifier/DD16GME1.jpg',price:'RM110 / bulan',normal:'RM220 / bulan',desc:'Versi dehumidifier dengan fungsi lebih menyeluruh dan pilihan saluran keluar air berterusan.',specs:['Kapasiti 16L/hari untuk ruang sederhana hingga besar.','Pilihan sambungan hose untuk buang air secara terus.','Fungsi auto-defrost & keselamatan overheating.'],benefits:['Sesuai untuk ruang stor, basement atau ruang kerja yang lembap.','Kurangkan risiko dinding berkulapuk & cat mengelupas.','Bantu tingkatkan keselesaan dan kesihatan pernafasan.']},
-
-  // === 15 TAMBAHAN (REAL LG 2025) ===
-  {cat:'refrigerator',model:'GR-B257KQKR',name:'Bottom Freezer 641L',poster:'assets/img/refrigerator/GR-B257KQKR.jpg',price:'RM120 / bulan',normal:'RM240 / bulan',badge:'New',desc:'Bottom freezer untuk akses mudah ke peti sejuk.',specs:['641L','Inverter','DoorCooling+'],benefits:['Tidak perlu bongkok','Akses harian mudah']},
-  {cat:'aircon',model:'S3-Q18KL3BA',name:'DUALCOOL 2.0HP',poster:'assets/img/aircon/S3-Q18KL3BA.jpg',price:'RM120 / bulan',normal:'RM240 / bulan',desc:'Untuk ruang tamu sederhana.',specs:['2.0HP','ThinQ','Energy Saving'],benefits:['Jimat bil','Kawalan suara']},
-  {cat:'tv',model:'86NANO80',name:'86" NanoCell',poster:'assets/img/tv/86NANO80.jpg',price:'RM300 / bulan',normal:'RM600 / bulan',badge:'Giant',desc:'TV gergasi untuk ruang tamu.',specs:['86"','4K NanoCell','ThinQ AI'],benefits:['Immersive besar']},
-  {cat:'washer',model:'FH4G1JCS2',name:'Top Load 13kg',poster:'assets/img/washer/FH4G1JCS2.jpg',price:'RM85 / bulan',normal:'RM170 / bulan',desc:'Top load klasik tapi pintar.',specs:['13kg','6 Motion DD','TurboDrum'],benefits:['Basuh kuat','Harga mesra']},
-  {cat:'dryer',model:'RH10VHP2B',name:'Dryer 10kg',poster:'assets/img/dryer/RH10VHP2B.jpg',price:'RM120 / bulan',normal:'RM240 / bulan',desc:'Dryer besar untuk keluarga.',specs:['10kg','Sensor Dry','Wrinkle Care'],benefits:['Kurang kedut','Auto stop']},
-  {cat:'air-purifier',model:'AS95GDWT0',name:'360° Tower',poster:'assets/img/air-purifier/AS95GDWT0.jpg',price:'RM180 / bulan',normal:'RM360 / bulan',badge:'Tower',desc:'Untuk ruang besar 100m².',specs:['100m²','Ionizer','Smart ThinQ'],benefits:['Kawalan phone','Udara segar besar']},
-  {cat:'water-purifier',model:'WD316AN',name:'Tabletop Hot & Cold',poster:'assets/img/water-purifier/WD316AN.jpg',price:'RM110 / bulan',normal:'RM220 / bulan',desc:'Air panas untuk teh & kopi.',specs:['Hot/Cold','4-Stage','Child Lock'],benefits:['Air panas segera','Selamat untuk anak']},
-  {cat:'tv',model:'55UR80',name:'55" UR80 4K',poster:'assets/img/tv/55UR80.jpg',price:'RM110 / bulan',normal:'RM220 / bulan',desc:'TV utama harian.',specs:['55"','4K UHD','Magic Remote'],benefits:['Mudah guna','Streaming lancar']},
-  {cat:'vacuum',model:'VS1610NN',name:'CordZero Handstick',poster:'assets/img/vacuum/VS1610NN.jpg',price:'RM60 / bulan',normal:'RM120 / bulan',desc:'Ringan untuk sofa.',specs:['Handstick','HEPA','Lightweight'],benefits:['Mudah angkat','Kurang habuk']},
-  {cat:'air-purifier',model:'PS-Q450WT',name:'PuriCare Mini',poster:'assets/img/air-purifier/PS-Q450WT.jpg',price:'RM50 / bulan',normal:'RM100 / bulan',desc:'Portable untuk kereta.',specs:['USB','HEPA','Portable'],benefits:['Udara bersih dalam kereta']},
-  {cat:'refrigerator',model:'GC-B257SLWL',name:'Side-by-Side InstaView',poster:'assets/img/refrigerator/GC-B257SLWL.jpg',price:'RM160 / bulan',normal:'RM320 / bulan',badge:'InstaView',desc:'Ketuk dua kali untuk lihat dalam tanpa buka pintu.',specs:['InstaView™','Craft Ice','UVnano®'],benefits:['Kurang kehilangan sejuk','Ais bulat premium']},
-  {cat:'aircon',model:'PC12SQ',name:'Portable 1.0HP',poster:'assets/img/aircon/PC12SQ.jpg',price:'RM100 / bulan',normal:'RM200 / bulan',desc:'Boleh alih ke mana-mana.',specs:['Portable','1.0HP','Dehumidify'],benefits:['Tiada pemasangan','Mudah pindah']},
-  {cat:'tv',model:'43UR75',name:'43" 4K Smart',poster:'assets/img/tv/43UR75.jpg',price:'RM70 / bulan',normal:'RM140 / bulan',desc:'Untuk bilik tidur.',specs:['43"','4K','webOS','HDR'],benefits:['Kecil tapi jelas']},
-  {cat:'washer',model:'T2310VSAM',name:'Top Load 10kg',poster:'assets/img/washer/T2310VSAM.jpg',price:'RM70 / bulan',normal:'RM140 / bulan',desc:'Pilihan bajet untuk sewa.',specs:['10kg','Inverter','Smart Diagnosis'],benefits:['Jimat elektrik','Mudah servis']},
-  {cat:'air-purifier',model:'AS65GDWH0',name:'360° Pet Mode',poster:'assets/img/air-purifier/AS65GDWH0.jpg',price:'RM150 / bulan',normal:'RM300 / bulan',badge:'Pet',desc:'Untuk rumah ada kucing/anjing.',specs:['Pet Mode','HEPA','Odor Removal'],benefits:['Kurang bau haiwan','Kurang bulu terbang']}
+const CATEGORY_ORDER = [
+  ['refrigerator', 'Petisejuk'],
+  ['water-purifier', 'Penapis Air'],
+  ['air-purifier', 'Penulen Udara'],
+  ['washer', 'Mesin Basuh'],
+  ['dryer', 'Pengering'],
+  ['tv', 'TV'],
+  ['aircond', 'Penghawa Dingin'],
+  ['styler', 'LG Styler'],
+  ['dishwasher', 'Pencuci Pinggan'],
+  ['vacuum', 'Pembersih Vakum'],
+  ['dehumidifier', 'Penghilang Lembapan']
 ];
 
-PRODUCTS.forEach((p,i) => p._idx = i);
+const PRODUCTS = [
+  // === REFRIGERATOR (7) ===
+  { _idx:0, cat:'refrigerator', model:'GC-L257KQKR', name:'InstaView Door-in-Door™', price:'RM299', normal:'RM598', poster:'assets/img/refrigerator/gc-l257kqkr.jpg', badge:'OHSEM 50%', desc:'Petisejuk 655L dengan InstaView™ – ketuk 2x untuk tengok dalam tanpa buka pintu.', specs:['655L','InstaView™','Door-in-Door™','Hygiene Fresh+™'], benefits:['Jimatan elektrik','Bau hilang 99.99%'] },
+  { _idx:1, cat:'refrigerator', model:'GR-X257CSKR', name:'Side-by-Side InstaView', price:'RM279', normal:'RM558', poster:'assets/img/refrigerator/gr-x257cskr.jpg', desc:'635L, ketuk pintu kaca untuk tengok dalam.' },
+  { _idx:2, cat:'refrigerator', model:'GR-B257KQKR', name:'Bottom Freezer InstaView', price:'RM249', normal:'RM498', poster:'assets/img/refrigerator/gr-b257kqkr.jpg', desc:'635L, InstaView™ di bahagian bawah.' },
+  { _idx:3, cat:'refrigerator', model:'GR-M257KQKR', name:'French Door InstaView', price:'RM269', normal:'RM538', poster:'assets/img/refrigerator/gr-m257kqkr.jpg', desc:'635L, pintu Perancis dengan InstaView™.' },
+  { _idx:4, cat:'refrigerator', model:'GR-H257KQKR', name:'Top Mount InstaView', price:'RM199', normal:'RM398', poster:'assets/img/refrigerator/gr-h257kqkr.jpg', desc:'505L, InstaView™ atas.' },
+  { _idx:5, cat:'refrigerator', model:'GR-C257KQKR', name:'Convertible InstaView', price:'RM259', normal:'RM518', poster:'assets/img/refrigerator/gr-c257kqkr.jpg', desc:'635L, boleh tukar peti sejuk ke peti beku.' },
+  { _idx:6, cat:'refrigerator', model:'GR-D257KQKR', name:'Multi-Door InstaView', price:'RM289', normal:'RM578', poster:'assets/img/refrigerator/gr-d257kqkr.jpg', desc:'705L, 5 pintu dengan InstaView™.' },
+
+  // === WATER PURIFIER (4) ===
+  { _idx:7, cat:'water-purifier', model:'WU525BS', name:'Tankless RO 500GPD', price:'RM89', normal:'RM178', poster:'assets/img/water/wu525bs.jpg', badge:'OHSEM 50%', desc:'Penapis air tanpa tangki, 500GPD, keluarkan air panas/sejuk.' },
+  { _idx:8, cat:'water-purifier', model:'WU625BS', name:'Tankless RO 600GPD', price:'RM99', normal:'RM198', poster:'assets/img/water/wu625bs.jpg', desc:'600GPD, air panas/sejuk/suhu bilik.' },
+  { _idx:9, cat:'water-purifier', model:'WU425BS', name:'Tankless RO 400GPD', price:'RM79', normal:'RM158', poster:'assets/img/water/wu425bs.jpg', desc:'400GPD, reka bentuk padat.' },
+  { _idx:10, cat:'water-purifier', model:'WD525BS', name:'Direct Piping RO', price:'RM69', normal:'RM138', poster:'assets/img/water/wd525bs.jpg', desc:'Piping terus, 5 tahap penapisan.' },
+
+  // === AIR PURIFIER (4) ===
+  { _idx:11, cat:'air-purifier', model:'AS10GDBYO', name:'PuriCare 360° Dual', price:'RM129', normal:'RM258', poster:'assets/img/air/as10gdbyo.jpg', badge:'OHSEM 50%', desc:'Penulen udara 360°, 100m², HEPA H14.' },
+  { _idx:12, cat:'air-purifier', model:'AS60GDWV0', name:'PuriCare 360° Single', price:'RM99', normal:'RM198', poster:'assets/img/air/as60gdwv0.jpg', desc:'60m², penapis HEPA.' },
+  { _idx:13, cat:'air-purifier', model:'AS95GDWV0', name:'PuriCare Wearable', price:'RM79', normal:'RM158', poster:'assets/img/air/as95gdwv0.jpg', desc:'Pakai di muka, H13 filter.' },
+  { _idx:14, cat:'air-purifier', model:'AS65GDWH0', name:'PuriCare Mini', price:'RM59', normal:'RM118', poster:'assets/img/air/as65gdwh0.jpg', desc:'Mudah alih, 8m².' },
+
+  // === WASHER & DRYER (6) ===
+  { _idx:15, cat:'washer', model:'FV1450S2W', name:'Front Load 10.5kg AI DD', price:'RM109', normal:'RM218', poster:'assets/img/washer/fv1450s2w.jpg', badge:'OHSEM 50%', desc:'10.5kg, AI DD, Steam+.' },
+  { _idx:16, cat:'washer', model:'FV1409S2W', name:'Front Load 9kg', price:'RM99', normal:'RM198', poster:'assets/img/washer/fv1409s2w.jpg', desc:'9kg, 6 Motion DD.' },
+  { _idx:17, cat:'washer', model:'F2721HTWV', name:'Washer Dryer Combo 21kg', price:'RM179', normal:'RM358', poster:'assets/img/washer/f2721htwv.jpg', desc:'Basuh + kering dalam satu mesin.' },
+  { _idx:18, cat:'dryer', model:'RH10VHPB', name:'Heat Pump Dryer 10kg', price:'RM129', normal:'RM258', poster:'assets/img/dryer/rh10vhpb.jpg', desc:'10kg, jimat elektrik.' },
+  { _idx:19, cat:'dryer', model:'RH9VHPB', name:'Heat Pump Dryer 9kg', price:'RM119', normal:'RM238', poster:'assets/img/dryer/rh9vhpb.jpg', desc:'9kg, sensor kering.' },
+  { _idx:20, cat:'dryer', model:'RC90V9AV2W', name:'Dual Inverter Dryer 9kg', price:'RM139', normal:'RM278', poster:'assets/img/dryer/rc90v9av2w.jpg', desc:'Dual inverter, senyap.' },
+
+  // === TV (5) ===
+  { _idx:21, cat:'tv', model:'OLED65C3PSA', name:'OLED evo C3 65"', price:'RM399', normal:'RM798', poster:'assets/img/tv/oled65c3psa.jpg', badge:'OHSEM 50%', desc:'OLED 4K, α9 AI Processor.' },
+  { _idx:22, cat:'tv', model:'86QNED91TPA', name:'QNED 86"', price:'RM499', normal:'RM998', poster:'assets/img/tv/86qned91tpa.jpg', desc:'QNED 4K, Mini LED.' },
+  { _idx:23, cat:'tv', model:'55UR7500PSC', name:'UHD 55"', price:'RM119', normal:'RM238', poster:'assets/img/tv/55ur7500psc.jpg', desc:'4K UHD, webOS.' },
+  { _idx:24, cat:'tv', model:'43UR7500PSC', name:'UHD 43"', price:'RM89', normal:'RM178', poster:'assets/img/tv/43ur7500psc.jpg', desc:'4K, HDR10.' },
+  { _idx:25, cat:'tv', model:'75UT9050PSA', name:'UT90 75"', price:'RM229', normal:'RM458', poster:'assets/img/tv/75ut9050psa.jpg', desc:'4K, 120Hz.' },
+
+  // === AIRCOND (4) ===
+  { _idx:26, cat:'aircond', model:'S3-Q09JAPPA', name:'Dual Inverter 1.0HP', price:'RM99', normal:'RM198', poster:'assets/img/aircond/s3-q09jappa.jpg', badge:'OHSEM 50%', desc:'1.0HP, Dual Inverter, WiFi.' },
+  { _idx:27, cat:'aircond', model:'S3-Q12JAPPA', name:'Dual Inverter 1.5HP', price:'RM109', normal:'RM218', poster:'assets/img/aircond/s3-q12jappa.jpg', desc:'1.5HP, cepat sejuk.' },
+  { _idx:28, cat:'aircond', model:'S3-Q18KLPPA', name:'Dual Inverter 2.0HP', price:'RM129', normal:'RM258', poster:'assets/img/aircond/s3-q18klppa.jpg', desc:'2.0HP, senyap.' },
+  { _idx:29, cat:'aircond', model:'S3-Q24KLPPA', name:'Dual Inverter 2.5HP', price:'RM139', normal:'RM278', poster:'assets/img/aircond/s3-q24klppa.jpg', desc:'2.5HP, besar ruang.' },
+
+  // === STYLER (2) ===
+  { _idx:30, cat:'styler', model:'S3RF', name:'Styler Steam Clothing Care', price:'RM199', normal:'RM398', poster:'assets/img/styler/s3rf.jpg', desc:'Stim baju, hilang bau & kuman.' },
+  { _idx:31, cat:'styler', model:'S3WF', name:'Styler WiFi', price:'RM219', normal:'RM438', poster:'assets/img/styler/s3wf.jpg', desc:'Kawal guna phone.' },
+
+  // === DISHWASHER (2) ===
+  { _idx:32, cat:'dishwasher', model:'DFC533FV', name:'QuadWash™ Steam 14 Pax', price:'RM139', normal:'RM278', poster:'assets/img/dishwasher/dfc533fv.jpg', badge:'OHSEM 50%', desc:'14 set pinggan, QuadWash™.' },
+  { _idx:33, cat:'dishwasher', model:'DFB424FP', name:'TrueSteam 14 Pax', price:'RM129', normal:'RM258', poster:'assets/img/dishwasher/dfb424fp.jpg', desc:'Steam, bersih mendalam.' },
+
+  // === VACUUM (3) ===
+  { _idx:34, cat:'vacuum', model:'A9K-ULTRA', name:'CordZero A9 Kompressor', price:'RM129', normal:'RM258', poster:'assets/img/vacuum/a9k-ultra.jpg', desc:'Kompressor, 120 min.' },
+  { _idx:35, cat:'vacuum', model:'A9N-LITE', name:'CordZero A9 Lite', price:'RM89', normal:'RM178', poster:'assets/img/vacuum/a9n-lite.jpg', desc:'Ringan, 60 min.' },
+  { _idx:36, cat:'vacuum', model:'VS20R9046T3', name:'Jet 90', price:'RM149', normal:'RM298', poster:'assets/img/vacuum/vs20r9046t3.jpg', desc:'200AW, 5 tahap penapisan.' },
+
+  // === DEHUMIDIFIER (3) ===
+  { _idx:37, cat:'dehumidifier', model:'MD16GQSA1', name:'PuriCare 16L', price:'RM99', normal:'RM198', poster:'assets/img/dehumidifier/md16gqsa1.jpg', desc:'16L/hari, 30m².' },
+  { _idx:38, cat:'dehumidifier', model:'MD19GQSA1', name:'PuriCare 19L', price:'RM109', normal:'RM218', poster:'assets/img/dehumidifier/md19gqsa1.jpg', desc:'19L/hari, 40m².' },
+  { _idx:39, cat:'dehumidifier', model:'DD20GQSA1', name:'Dual Inverter 20L', price:'RM119', normal:'RM238', poster:'assets/img/dehumidifier/dd20gqsa1.jpg', desc:'20L/hari, jimat elektrik.' },
+
+  // === BONUS: VYBE CREW PICKS (tambah chip) ===
+  // GC-L257KQKR, S3-Q09JAPPA, DFC533FV — dah ada atas
+];
