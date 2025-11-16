@@ -1,178 +1,234 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LG Subscribe x VybeCo — OHSEM 50% Landing</title>
-  <meta name="description" content="LG Subscribe Malaysia by VybeCo Resources. Pilih Refrigerator, Water Purifier, Air Purifier, Washer, Dryer, TV, Aircond, Styler, Dishwasher, Vacuum dan Dehumidifier dengan promosi OHSEM 50%." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LG Subscribe x VybeCo — OHSEM 50% Langganan Bulanan</title>
+  <meta name="description" content="LG Subscribe™ x VybeCo — langganan bulanan dengan pemasangan & servis termasuk. Clean air, clean water, clean clothes, clean vibes. Street to Suite." />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<!-- NAV -->
-<div class="nav">
-  <div class="wrap nav-row">
-    <div class="nav-title">VYBECO • LG SUBSCRIBE OHSEM UNIT</div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap">
-      <a href="#produk" class="btn">Produk</a>
-      <a href="#order" class="btn">Order</a>
-      <a href="#join" class="btn primary">Join VYBE CREW</a>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="wrap nav-row">
+      <div class="nav-title">VYBECO • LG SUBSCRIBE OHSEM UNIT</div>
+      <div class="nav-cta">
+        <a href="#produk" class="btn">Produk</a>
+        <a href="#order" class="btn">Order</a>
+        <a href="#join" class="btn primary">Join VYBE CREW</a>
+      </div>
     </div>
+  </nav>
+
+  <!-- VYBE METER -->
+  <div class="meter-container">
+    <span>VYBE</span>
+    <div class="meter-fill"></div>
+    <span id="vybeScore">0</span>%
   </div>
-</div>
 
-<!-- VYBE METER + HUSTLE MODE -->
-<div class="meter-container">
-  <span>VYBE</span>
-  <div class="meter-fill"></div>
-  <span id="vybeScore">0</span>%
-</div>
+  <!-- HUSTLE MODE TOGGLE -->
+  <div id="hustleToggle">
+    <button class="btn primary">HUSTLE MODE OFF</button>
+    <small id="hustleStatus">OFF</small>
+  </div>
 
-<div id="hustleToggle" style="position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:90;">
-  <button class="btn primary" style="padding:8px 16px;">HUSTLE MODE OFF</button>
-  <small id="hustleStatus" style="display:block;text-align:center;margin-top:4px;color:var(--muted);font-size:11px;">OFF</small>
-</div>
+  <!-- PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+  <div id="progressText">Clean Street</div>
 
-<!-- PROGRESS BAR -->
-<div class="progress-container">
-  <div class="progress-bar"></div>
-</div>
-<div id="progressText" style="position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:100;font-size:11px;color:var(--silver);opacity:0.8;">
-  Clean Street
-</div>
+  <!-- FLOAT TOP -->
+  <div id="floatTop">
+    <button class="btn primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Ke Atas</button>
+  </div>
 
-<!-- FLOAT TOP -->
-<div id="floatTop">
-  <button class="btn primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Ke Atas</button>
-</div>
+  <!-- HERO -->
+  <header>
+    <div class="wrap">
+      <h1>Clean Street. Smart Home.</h1>
+      <p class="sub">
+        LG Subscribe™ x VybeCo — langganan bulanan, pemasangan & servis termasuk. Clean air, clean water, clean clothes, clean vibes. We hustle from the street to your suite.
+      </p>
 
-<!-- HERO -->
-<header>
-  <div class="wrap">
-    <h1>Clean Street. Smart Home.</h1>
-    <p class="sub">
-      LG Subscribe™ x VybeCo — langganan bulanan, pemasangan & servis termasuk. Clean air, clean water, clean clothes, clean vibes. We hustle from the street to your suite.
-    </p>
-    <div class="brandbar">
-      <div class="brand"><img src="assets/img/logos/lg-logo.png" alt="LG"></div>
-      <div class="brand"><img src="assets/img/logos/lg-subscribe-logo.png" alt="LG Subscribe"></div>
-      <div class="brand"><img src="assets/img/logos/vybeco-logo.png" alt="VybeCo Resources"></div>
-      <div class="brand"><img src="assets/img/logos/vybe-crew-logo.png" alt="VYBE CREW"></div>
+      <!-- BRAND BAR -->
+      <div class="brandbar">
+        <div class="brand"><img src="assets/img/logos/lg-logo.png" alt="LG"></div>
+        <div class="brand"><img src="assets/img/logos/lg-subscribe-logo.png" alt="LG Subscribe"></div>
+        <div class="brand"><img src="assets/img/logos/vybeco-logo.png" alt="VybeCo Resources"></div>
+        <div class="brand"><img src="assets/img/logos/vybe-crew-logo.png" alt="VYBE CREW"></div>
+      </div>
+
+      <!-- HERO GRID -->
+      <div class="hero-grid">
+        <img class="hero-photo" src="assets/img/hasrin.jpg" alt="Hasrin Jais — LG Subscribe Manager & Founder VYBE CREW" loading="lazy">
+        <div>
+          <div class="hero-tagline">“We don’t wait. We Hustle with VYBES.”</div>
+          <p class="hero-p">
+            Hai, saya <b>Hasrin Jais</b>. Pilih produk ikut bajet, klik WhatsApp — saya bantu semak kelayakan <b>OHSEM 50%</b>, urus permohonan & atur pemasangan sampai siap.
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#produk">Lihat Produk</a>
+            <a class="btn" href="#order">Order Sekarang</a>
+            <a class="btn" href="#join">Sertai VYBE CREW</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OHSEM 50% BANNER -->
+      <div class="ohsem">
+        <span class="ohsem-tag">OHSEM 50%</span>
+        <span>
+          <b>Diskaun 50% yuran langganan</b> untuk <b>9 bulan pertama</b> bagi produk terpilih. Pemasangan, servis & lawatan berkala termasuk dalam langganan (5 tahun / 7 tahun kontrak, ikut model).
+        </span>
+      </div>
     </div>
-    <div class="hero-grid">
-      <img class="hero-photo" src="assets/img/hasrin.jpg" alt="Hasrin Jais — LG Subscribe Manager & Founder VYBE CREW">
-      <div>
-        <div class="hero-tagline">“We don’t wait. We Hustle with VYBES.”</div>
-        <p class="hero-p">
-          Hai, saya <b>Hasrin Jais</b>. Pilih produk ikut bajet, klik WhatsApp — saya bantu semak kelayakan <b>OHSEM 50%</b>, urus permohonan & atur pemasangan sampai siap.
+  </header>
+
+  <!-- CLEAN STREET COLLECTION -->
+  <main class="wrap" id="produk">
+    <div class="section-title">CLEAN STREET COLLECTION</div>
+    <p class="section-sub">Pilih kategori — dari aircond sejuk macam KLCC sampai penapis air bersih macam air terjun.</p>
+    <div id="productSections"></div>
+  </main>
+
+  <!-- BAGAIMANA PROSES TEMPAHAN? -->
+  <section class="wrap" id="info">
+    <div class="section-title">BAGAIMANA PROSES TEMPAHAN?</div>
+    <div class="infocards">
+      <div class="infocard">
+        <h4>Proses Permohonan</h4>
+        <p>
+          1. Daftar dalam sistem<br>
+          2. Jika nama lulus, HQ akan hubungi untuk pengesahan<br>
+          3. Technician hubungi untuk tetapkan tarikh & lokasi pemasangan<br>
+          4. Barang siap pasang bulan ini, <b>bayar bulan depan</b>
         </p>
-        <div class="hero-cta">
-          <a class="btn primary" href="#produk">Lihat Produk</a>
-          <a class="btn" href="#order">Order Sekarang</a>
-          <a class="btn" href="#join">Sertai VYBE CREW</a>
-        </div>
+      </div>
+      <div class="infocard">
+        <h4>Anggaran Masa</h4>
+        <p>
+          <b>Proses Lulus:</b> 1–3 hari bekerja<br>
+          <b>Penghantaran & Pemasangan:</b><br>
+          • 7–10 hari (Semenanjung)<br>
+          • 7–30 hari (Sabah & Sarawak)
+        </p>
+      </div>
+      <div class="infocard">
+        <h4>Terma & Syarat Ringkas</h4>
+        <p>
+          Valid Warganegara Malaysia (18–70 tahun)<br>
+          Tiada blacklist (CTOS / CCRIS)<br>
+          Kad debit/kredit aktif (autodebit)<br>
+          Nama kad mesti sama seperti pemohon<br>
+          Validasi RM10 dipulangkan selepas pengesahan
+        </p>
+      </div>
+      <div class="infocard">
+        <h4>Dokumen Diperlukan</h4>
+        <p>
+          IC depan & belakang<br>
+          Penyata bank 3 bulan<br>
+          Kad debit/kredit (gambar depan)<br>
+          Bukti bayaran RM10 validasi
+        </p>
       </div>
     </div>
-    <div class="ohsem">
-      <span class="ohsem-tag">OHSEM 50%</span>
-      <span><b>Diskaun 50% yuran langganan</b> untuk <b>9 bulan pertama</b> bagi produk terpilih. Pemasangan, servis & lawatan berkala termasuk dalam langganan (5 tahun / 7 tahun kontrak, ikut model).</span>
+  </section>
+
+  <!-- ORDER FORM -->
+  <section class="wrap cta-section" id="order">
+    <h3>ORDER SEKARANG — BAYAR BULAN DEPAN</h3>
+    <p>Isi borang, saya semak kelayakan & urus sampai siap.</p>
+    <form id="orderForm" onsubmit="submitOrder(event)">
+      <input type="text" name="model" id="order_model" placeholder="Model (cth: GC-L257KQKR)" required />
+      <input type="text" name="nama" placeholder="Nama Penuh (seperti IC)" required />
+      <input type="tel" name="phone" placeholder="No. Telefon Utama" required />
+      <input type="tel" name="phone2" placeholder="No. Telefon Lain (jika ada)" />
+      <textarea name="alamat" placeholder="Alamat Penuh (termasuk poskod)" required></textarea>
+      <input type="email" name="email" placeholder="Emel (untuk notis)" />
+      <input type="text" name="warna" placeholder="Warna Pilihan (jika ada)" />
+      <button type="submit" class="btn primary">Hantar Permohonan</button>
+    </form>
+  </section>
+
+  <!-- JOIN VYBE CREW -->
+  <section class="wrap cta-section" id="join">
+    <h3>SERTAI VYBE CREW — JUAL LG SUBSCRIBE</h3>
+    <p>Dapat komisen, training & support penuh. Street to Suite.</p>
+    <form id="crewForm" onsubmit="submitCrew(event)">
+      <input type="text" name="nama" placeholder="Nama Penuh" required />
+      <input type="tel" name="phone" placeholder="No. Telefon" required />
+      <textarea name="pengalaman" placeholder="Pengalaman jualan (jika ada)"></textarea>
+      <textarea name="sebab" placeholder="Kenapa nak join VYBE CREW?"></textarea>
+      <button type="submit" class="btn primary">Hantar Permohonan</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2025 VybeCo Resources • LG Subscribe™ Malaysia. All rights reserved.</p>
+      <p><small>Powered by Street Hustle. Clean Street. Smart Home.</small></p>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="float">
+    <div class="float-label" id="floatLabel">Semak promosi OHSEM 50% untuk model yang anda minat.</div>
+    <a class="btn wa" target="_blank" rel="noopener" href="https://wa.link/fsc0hq">WhatsApp</a>
+  </div>
+
+  <!-- AYRA AI -->
+  <div class="ai-launch">
+    <button type="button" id="aiToggle">AYRA • Street Concierge</button>
+  </div>
+  <div class="ai-panel" id="aiPanel">
+    <div class="ai-head"><strong>AYRA</strong> <span style="color:var(--muted)">• Street to Suite. Pilih LG Subscribe.</span></div>
+    <div class="ai-body" id="aiBody">
+      <div class="ai-msg">Hai! Taip bajet & kategori (cth: <b>“fridge RM120”</b>, <b>“TV besar RM300”</b>).</div>
+    </div>
+    <div class="ai-controls">
+      <input id="aiInput" placeholder="Contoh: washer keluarga RM100" />
+      <button type="button" class="btn primary sm" id="aiSend">Hantar</button>
     </div>
   </div>
-</header>
 
-<!-- CLEAN STREET COLLECTION -->
-<main class="wrap" id="produk">
-  <div class="section-title">CLEAN STREET COLLECTION</div>
-  <p class="section-sub">Pilih kategori — dari aircond sejuk macam KLCC sampai penapis air bersih macam air terjun.</p>
-  <div id="productSections"></div>
-</main>
-
-<!-- INFO ORDER -->
-<section class="wrap" id="info">
-  <div class="section-title">BAGAIMANA PROSES TEMPAHAN?</div>
-  <div class="infocards">
-    <div class="infocard">
-      <h4>Proses Permohonan</h4>
-      <p>1. Daftar dalam sistem<br>2. Jika nama lulus, HQ akan hubungi untuk pengesahan<br>3. Technician hubungi untuk tetapkan tarikh & lokasi pemasangan<br>4. Barang siap pasang bulan ini, <b>bayar bulan depan</b></p>
-    </div>
-    <div class="infocard">
-      <h4>Anggaran Masa</h4>
-      <p><b>Proses Lulus:</b> 1–3 hari bekerja<br><b>Penghantaran & Pemasangan:</b><br>• 7–10 hari (Semenanjung)<br>• 7–30 hari (Sabah & Sarawak)</p>
-    </div>
-    <div class="infocard">
-      <h4>Terma & Syarat Ringkas</h4>
-      <p>Valid Warganegara Malaysia (18–70 tahun)<br>Tiada blacklist (CTOS / CCRIS)<br>Kad debit/kredit aktif (autodebit)<br>Nama kad mesti sama seperti pemohon<br>Validasi RM10 dipulangkan selepas pengesahan</p>
-    </div>
-    <div class="infocard">
-      <h4>Dokumen Diperlukan</h4>
-      <p>IC depan & belakang<br>Penyata bank 3 bulan<br>Kad debit/kredit (gambar depan)<br>Bukti bayaran RM10 validasi</p>
-    </div>
-  </div>
-</section>
-
-<!-- ORDER, JOIN, FOOTER, FLOAT, AYRA, MODAL -->
-<!-- (SAMA MACAM KAU PUNYA, TAPI AKU RINGKASKAN) -->
-
-<!-- FLOATING CTA -->
-<div class="float">
-  <div class="float-label" id="floatLabel">Semak promosi OHSEM 50% untuk model yang anda minat.</div>
-  <a class="btn wa" target="_blank" rel="noopener" href="https://wa.link/fsc0hq?text=Hi%20Hasrin,%20saya%20nak%20semak%20promosi%20OHSEM%2050%%20untuk%20LG%20Subscribe.">WhatsApp</a>
-</div>
-
-<!-- AYRA -->
-<div class="ai-launch">
-  <button type="button" id="aiToggle">AYRA • Street Concierge</button>
-</div>
-<div class="ai-panel" id="aiPanel">
-  <div class="ai-head"><strong>AYRA</strong><span style="color:var(--muted)"> • Street to Suite. Pilih LG Subscribe.</span></div>
-  <div class="ai-body" id="aiBody">
-    <div class="ai-msg">
-      Hai! Taip bajet & kategori (cth: <b>“fridge RM120”</b>, <b>“TV besar RM300”</b>).
-    </div>
-  </div>
-  <div class="ai-controls">
-    <input id="aiInput" placeholder="Contoh: washer keluarga RM100" />
-    <button type="button" class="btn primary sm" id="aiSend">Hantar</button>
-  </div>
-</div>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="sheet">
-    <header>
-      <h3 id="m-title" style="font-size:15px;font-weight:800"></h3>
-      <button class="close" type="button" onclick="toggleModal(false)">Tutup</button>
-    </header>
-    <div class="content">
-      <div>
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="sheet">
+      <header>
+        <h3 id="m-title"></h3>
+        <button class="close" type="button" onclick="toggleModal(false)">Tutup</button>
+      </header>
+      <div class="content">
+        <div>
+          <div class="panel">
+            <div id="m-tags"></div>
+            <div id="m-price"></div>
+          </div>
+          <div class="panel">
+            <h4>Ringkasan (BM)</h4>
+            <p id="m-desc"></p>
+          </div>
+        </div>
         <div class="panel">
-          <div id="m-tags"></div>
-          <div id="m-price" style="margin-top:6px"></div>
-        </div>
-        <div class="panel">
-          <h4 style="font-size:13px;margin-bottom:4px">Ringkasan (BM)</h4>
-          <p id="m-desc" style="font-size:13px;color:var(--muted);line-height:1.5"></p>
+          <h4>Specs & Benefits</h4>
+          <ul id="m-specs"></ul>
         </div>
       </div>
-      <div class="panel">
-        <h4 style="font-size:13px;margin-bottom:4px">Specs & Benefits</h4>
-        <ul id="m-specs"></ul>
+      <div class="modal-footer">
+        <a id="m-wa" class="btn wa sm" target="_blank" rel="noopener">WhatsApp Hasrin</a>
+        <button class="btn sm outline-soft" onclick="prefillOrderFromModal()">Isi Borang Order</button>
       </div>
-    </div>
-    <div class="modal-footer">
-      <a id="m-wa" class="btn wa sm" target="_blank" rel="noopener">WhatsApp Hasrin</a>
-      <a class="btn sm outline-soft" href="#order" onclick="prefillOrderFromModal()">Isi Borang Order</a>
     </div>
   </div>
-</div>
 
-<!-- FORMS (ORDER & JOIN) -->
-<section class="wrap cta-section" id="order">...</section>
-<section class="wrap cta-section" id="join">...</section>
-<footer>...</footer>
-
-<!-- LOAD JS -->
-<script src="js/products-data.js"></script>
-<script src="js/script.js"></script>
+  <!-- LOAD JS -->
+  <script src="js/products-data.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
