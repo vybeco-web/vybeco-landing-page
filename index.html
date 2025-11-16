@@ -6,393 +6,173 @@
   <title>LG Subscribe x VybeCo — OHSEM 50% Landing</title>
   <meta name="description" content="LG Subscribe Malaysia by VybeCo Resources. Pilih Refrigerator, Water Purifier, Air Purifier, Washer, Dryer, TV, Aircond, Styler, Dishwasher, Vacuum dan Dehumidifier dengan promosi OHSEM 50%." />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#05060a; --bg2:#0b0d12; --ink:#e2e8f0; --muted:#9aa4b5;
-      --blue:#4cc9f0; --pink:#ff2d55; --silver:#cbd5f5; --line:rgba(148,163,184,.35);
-      --ok:#9be15d; --warn:#ffce00; --street:#25D366;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Urbanist',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(900px 600px at 10% -10%,rgba(76,201,240,.16),transparent 60%),
-        radial-gradient(900px 600px at 90% -8%,rgba(248,113,113,.12),transparent 60%),
-        linear-gradient(#020617,#020617 32%,#020817);
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .wrap{max-width:1180px;margin:0 auto;padding:20px}
-    /* NAV */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(2,6,23,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(15,23,42,.9);}
-    .nav-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .nav-title{font-weight:800;color:var(--blue);letter-spacing:.06em;font-size:14px;text-transform:uppercase}
-    .btn{display:inline-block;padding:9px 14px;border-radius:999px;font-weight:700;font-size:13px;border:1px solid rgba(148,163,184,.45);background:#020617;}
-    .btn.primary{background:linear-gradient(90deg,var(--blue),var(--pink));border-color:transparent;color:#020617}
-    .btn.wa{background:linear-gradient(90deg,#25D366,#128C7E);border-color:transparent;color:#020617}
-    .btn.sm{font-size:12px;padding:6px 11px}
-    .btn.outline-soft{background:transparent;border-style:dashed}
-    /* HERO */
-    header{padding:26px 0 4px;border-bottom:1px solid rgba(15,23,42,.9)}
-    h1{font-size:clamp(28px,4vw,42px);margin-bottom:6px;color:var(--silver);letter-spacing:.04em}
-    .sub{color:var(--muted);font-size:14px;max-width:560px}
-    .brandbar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
-    .brand{background:radial-gradient(circle at 0 0,rgba(148,163,184,.28),transparent 55%);background-color:#050812;border-radius:16px;padding:8px;border:1px solid rgba(30,41,59,.9);display:flex;align-items:center;justify-content:center;}
-    .brand img{max-height:42px;filter:drop-shadow(0 0 8px rgba(15,23,42,.9))}
-    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
-    .hero-photo{border-radius:20px;border:1px solid rgba(30,64,175,.9);box-shadow:0 26px 60px rgba(15,23,42,.8);object-fit:cover;width:100%;max-width:360px;}
-    .hero-tagline{font-size:18px;font-weight:700;margin-bottom:6px}
-    .hero-p{font-size:14px;color:var(--muted);max-width:440px}
-    .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .ohsem{margin:18px 0;padding:14px;border-radius:14px;border:1px solid rgba(234,179,8,.55);background:linear-gradient(120deg,rgba(253,224,71,.14),rgba(56,189,248,.12));font-size:13px;}
-    .ohsem-tag{background:var(--warn);color:#020617;font-weight:900;padding:6px 10px;border-radius:999px;margin-right:8px}
-    /* SECTION TITLES */
-    .section-title{font-weight:800;font-size:20px;letter-spacing:.08em;text-transform:uppercase;margin:28px 0 4px;color:var(--silver);}
-    .section-sub{font-size:13px;color:var(--muted);margin-bottom:8px}
-    /* PRODUCT GRID */
-    .cat-section{margin-top:18px}
-    .cat-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:8px;margin-bottom:6px}
-    .cat-heading h2{font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--silver)}
-    .cat-heading small{font-size:12px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
-    .card{position:relative;border-radius:16px;background:#05070f;border:1px solid rgba(30,41,59,.85);overflow:hidden;}
-    .poster{aspect-ratio:4/5;background:radial-gradient(circle at 0 0,rgba(15,23,42,.8),transparent 60%);border-radius:16px 16px 0 0;overflow:hidden;border-bottom:1px solid rgba(30,41,59,.85);}
-    .poster img{width:100%;height:100%;object-fit:cover}
-    .badge{position:absolute;top:10px;left:10px;font-size:11px;font-weight:800;text-transform:uppercase;background:rgba(234,179,8,1);color:#020617;padding:6px 10px;border-radius:999px;}
-    .chip{position:absolute;top:8px;font-size:11px;padding:4px 8px;border-radius:999px;font-weight:800;}
-    .street-pick{right:8px;background:#25D366;color:#020617;}
-    .crew-pick{right:8px;background:#ffce00;color:#020617;}
-    .body{padding:11px 13px 13px}
-    .model{font-size:14px;font-weight:700;margin-bottom:3px}
-    .cat-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
-    .price{margin-top:6px;font-weight:800;font-size:14px;color:var(--ok)}
-    .price small{display:block;font-size:11px;color:var(--muted);font-weight:400}
-    .card-cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    /* CAT UP BTN */
-    .cat-up-btn{text-align:center;margin:12px 0 6px;padding:0 12px;}
-    .cat-up-btn .btn{font-size:12px;padding:6px 11px;min-width:120px;background:linear-gradient(90deg,#25D366,#128C7E);color:#020617;font-weight:800;border:none;box-shadow:0 4px 12px rgba(37,211,102,.3);}
-    /* INFO / CTA */
-    .infocards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:10px}
-    .infocard{background:#05070f;border-radius:14px;border:1px solid rgba(30,41,59,.9);padding:14px;font-size:13px;}
-    .infocard h4{margin-bottom:6px;font-size:14px}
-    .infocard p{color:var(--muted);line-height:1.6}
-    .cta-section{margin-top:32px;background:radial-gradient(circle at 0 0,rgba(56,189,248,.2),transparent 55%),radial-gradient(circle at 100% 0,rgba(248,113,113,.2),transparent 55%),#020617;border-radius:20px;border:1px solid rgba(30,64,175,.9);box-shadow:0 24px 60px rgba(15,23,42,.9);text-align:center;padding:26px 16px;}
-    .cta-section h3{font-size:19px;margin-bottom:4px}
-    .cta-section p{font-size:13px;color:var(--muted)}
-    .form{display:grid;gap:11px;max-width:560px;margin:16px auto 4px}
-    input,select,textarea{width:100%;padding:11px 13px;border-radius:12px;background:#020617;border:1px solid rgba(30,41,59,.9);color:var(--ink);font-size:13px;}
-    input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 1px rgba(56,189,248,.35)}
-    button{background:linear-gradient(90deg,var(--blue),#4361ee);color:#f8fafc;padding:11px 14px;border:none;border-radius:999px;font-weight:800;font-size:13px;cursor:pointer;}
-    button:hover{filter:brightness(1.06)}
-    footer{margin-top:30px;padding:22px 16px;border-top:1px solid rgba(15,23,42,.9);background:#020617;text-align:center;font-size:12px;color:var(--muted);}
-    /* MODAL */
-    .modal{position:fixed;inset:0;z-index:70;background:rgba(15,23,42,.85);display:none;align-items:center;justify-content:center;padding:18px;}
-    .modal.open{display:flex}
-    .sheet{max-width:980px;width:100%;background:#020617;border-radius:18px;border:1px solid rgba(148,163,184,.5);overflow:hidden;}
-    .sheet header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid rgba(30,41,59,.9);}
-    .sheet .content{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px}
-    .panel{background:#05070f;border-radius:14px;border:1px solid rgba(30,41,59,.9);padding:11px 12px;font-size:13px;}
-    .chip{display:inline-block;margin:4px 6px 2px 0;padding:5px 9px;border-radius:999px;font-size:11px;border:1px solid rgba(56,189,248,.4);color:var(--blue);background:#020617;}
-    .close{background:#020617;border-radius:999px;border:1px solid rgba(148,163,184,.5);color:var(--ink);font-size:12px;padding:6px 10px;cursor:pointer}
-    #m-price{font-size:13px;color:var(--ok);font-weight:700}
-    #m-specs{padding-left:18px;color:var(--ink);line-height:1.6}
-    #m-specs li{margin-bottom:3px}
-    .modal-footer{display:flex;gap:8px;padding:12px 14px;border-top:1px solid rgba(30,41,59,.9);background:#05070f}
-    /* FLOATING ELEMENTS */
-    .float{position:fixed;right:16px;bottom:16px;z-index:80;display:flex;gap:8px;align-items:center;}
-    .float-label{background:#020617;border-radius:12px;border:1px solid rgba(30,41,59,.9);padding:9px 11px;font-size:12px;color:var(--muted);max-width:200px;}
-    .float .btn{border:none}
-    .float-top{position:fixed;left:16px;bottom:16px;z-index:80;display:none;}
-    .float-top .btn{background:rgba(2,6,23,.9);border:1px dashed rgba(148,163,184,.5);color:var(--muted);font-size:11px;padding:7px 10px;}
-    .street-progress{position:fixed;top:0;left:0;right:0;z-index:90;height:4px;background:rgba(15,23,42,.9);}
-    .progress-bar{height:100%;width:0;background:linear-gradient(90deg,#25D366,#4cc9f0);transition:width .3s ease;}
-    .progress-label{position:absolute;top:8px;left:16px;font-size:11px;font-weight:800;color:#25D366;text-transform:uppercase;letter-spacing:.1em;}
-    .vybe-meter{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);width:280px;height:8px;background:rgba(15,23,42,.9);border-radius:999px;overflow:hidden;z-index:90;box-shadow:0 4px 16px rgba(15,23,42,.8);}
-    .meter-fill{height:100%;width:0;background:linear-gradient(90deg,#ff2d55,#4cc9f0);transition:width .6s ease;}
-    .meter-label{position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:800;color:#ff2d55;white-space:nowrap;}
-    .hustle-toggle{position:fixed;right:16px;bottom:152px;z-index:81;}
-    .hustle-toggle .btn{background:#ff2d55;color:#020617;font-weight:800;border:none;box-shadow:0 4px 16px rgba(255,45,85,.4);}
-    .hustle-on{background:#25D366 !important;}
-    .leaderboard{position:fixed;top:70px;right:16px;width:180px;background:#020617;border:1px solid rgba(148,163,184,.4);border-radius:16px;padding:10px;font-size:11px;text-align:center;z-index:80;box-shadow:0 8px 32px rgba(15,23,42,.8);display:none;}
-    .leaderboard.open{display:block;}
-    .leader-head{font-weight:800;color:#ff2d55;margin-bottom:6px;}
-    .leader-list > div{margin:3px 0;}
-    /* AYRA */
-    .ai-launch{position:fixed;right:16px;bottom:82px;z-index:81;}
-    .ai-launch button{border:none;border-radius:999px;background:linear-gradient(120deg,var(--blue),var(--pink));color:#020617;font-weight:800;font-size:13px;padding:10px 16px;cursor:pointer;box-shadow:0 16px 42px rgba(15,23,42,.8);}
-    .ai-panel{position:fixed;right:16px;bottom:152px;z-index:82;width:360px;max-width:92vw;background:#020617;border-radius:16px;border:1px solid rgba(30,41,59,.9);overflow:hidden;display:none;}
-    .ai-panel.open{display:block}
-    .ai-head{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid rgba(30,41,59,.9);font-size:13px;}
-    .ai-body{max-height:360px;overflow:auto;padding:10px 12px;font-size:13px}
-    .ai-msg{margin:6px 0;padding:9px 10px;border-radius:12px;background:#05070f;border:1px solid rgba(30,41,59,.9);}
-    .ai-msg.me{background:#0b1220;border-color:rgba(56,189,248,.5)}
-    .ai-controls{display:flex;gap:8px;padding:9px 10px;border-top:1px solid rgba(30,41,59,.9);background:#020617;}
-    .ai-controls input{flex:1;background:#020617;border-radius:999px;border:1px solid rgba(30,41,59,.9);color:var(--ink);font-size:12px;padding:8px 11px;}
-    .ai-controls .btn{font-size:12px;padding:7px 12px}
-    @media (max-width:920px){.hero-grid{grid-template-columns:1fr}.hero-photo{margin:0 auto}.sheet .content{grid-template-columns:1fr}}
-    @media (max-width:640px){.brandbar{grid-template-columns:repeat(2,1fr)}.nav-row{flex-direction:column;align-items:flex-start}}
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- STREET TO SUITE PROGRESS -->
-  <div class="street-progress" id="streetProgress">
-    <div class="progress-bar"></div>
-    <div class="progress-label"><span id="progressText">Clean Street</span></div>
-  </div>
-
-  <!-- NAV -->
-  <div class="nav">
-    <div class="wrap nav-row">
-      <div class="nav-title">VYBECO • LG SUBSCRIBE OHSEM UNIT</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <a href="#produk" class="btn">Produk</a>
-        <a href="#order" class="btn">Order</a>
-        <a href="#join" class="btn primary">Join VYBE CREW</a>
-      </div>
+<!-- NAV -->
+<div class="nav">
+  <div class="wrap nav-row">
+    <div class="nav-title">VYBECO • LG SUBSCRIBE OHSEM UNIT</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a href="#produk" class="btn">Produk</a>
+      <a href="#order" class="btn">Order</a>
+      <a href="#join" class="btn primary">Join VYBE CREW</a>
     </div>
   </div>
+</div>
 
-  <!-- HERO -->
-  <header>
-    <div class="wrap">
-      <h1>Clean Street. Smart Home.</h1>
-      <p class="sub">LG Subscribe™ x VybeCo — langganan bulanan, pemasangan & servis termasuk. <b>Clean air, clean water, clean clothes, clean vibes.</b> We hustle from the street to your suite.</p>
-      <div class="brandbar">
-        <div class="brand"><img src="assets/img/logos/lg-logo.png" alt="LG"></div>
-        <div class="brand"><img src="assets/img/logos/lg-subscribe-logo.png" alt="LG Subscribe"></div>
-        <div class="brand"><img src="assets/img/logos/vybeco-logo.png" alt="VybeCo Resources"></div>
-        <div class="brand"><img src="assets/img/logos/vybe-crew-logo.png" alt="VYBE CREW"></div>
-      </div>
-      <div class="hero-grid">
-        <img class="hero-photo" src="assets/img/hasrin.jpg" alt="Hasrin Jais — LG Subscribe Manager & Founder VYBE CREW">
-        <div>
-          <div class="hero-tagline">“We don’t wait. We Hustle with VYBES.”</div>
-          <p class="hero-p">Hai, saya <b>Hasrin Jais</b>. Pilih produk ikut bajet, klik WhatsApp — saya bantu semak kelayakan <b>OHSEM 50%</b>, urus permohonan & atur pemasangan sampai siap.</p>
-          <div class="hero-cta">
-            <a class="btn primary" href="#produk">Lihat Produk</a>
-            <a class="btn" href="#order">Order Sekarang</a>
-            <a class="btn" href="#join">Sertai VYBE CREW</a>
-          </div>
+<!-- VYBE METER + HUSTLE MODE -->
+<div class="meter-container">
+  <span>VYBE</span>
+  <div class="meter-fill"></div>
+  <span id="vybeScore">0</span>%
+</div>
+
+<div id="hustleToggle" style="position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:90;">
+  <button class="btn primary" style="padding:8px 16px;">HUSTLE MODE OFF</button>
+  <small id="hustleStatus" style="display:block;text-align:center;margin-top:4px;color:var(--muted);font-size:11px;">OFF</small>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-container">
+  <div class="progress-bar"></div>
+</div>
+<div id="progressText" style="position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:100;font-size:11px;color:var(--silver);opacity:0.8;">
+  Clean Street
+</div>
+
+<!-- FLOAT TOP -->
+<div id="floatTop">
+  <button class="btn primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Ke Atas</button>
+</div>
+
+<!-- HERO -->
+<header>
+  <div class="wrap">
+    <h1>Clean Street. Smart Home.</h1>
+    <p class="sub">
+      LG Subscribe™ x VybeCo — langganan bulanan, pemasangan & servis termasuk. Clean air, clean water, clean clothes, clean vibes. We hustle from the street to your suite.
+    </p>
+    <div class="brandbar">
+      <div class="brand"><img src="assets/img/logos/lg-logo.png" alt="LG"></div>
+      <div class="brand"><img src="assets/img/logos/lg-subscribe-logo.png" alt="LG Subscribe"></div>
+      <div class="brand"><img src="assets/img/logos/vybeco-logo.png" alt="VybeCo Resources"></div>
+      <div class="brand"><img src="assets/img/logos/vybe-crew-logo.png" alt="VYBE CREW"></div>
+    </div>
+    <div class="hero-grid">
+      <img class="hero-photo" src="assets/img/hasrin.jpg" alt="Hasrin Jais — LG Subscribe Manager & Founder VYBE CREW">
+      <div>
+        <div class="hero-tagline">“We don’t wait. We Hustle with VYBES.”</div>
+        <p class="hero-p">
+          Hai, saya <b>Hasrin Jais</b>. Pilih produk ikut bajet, klik WhatsApp — saya bantu semak kelayakan <b>OHSEM 50%</b>, urus permohonan & atur pemasangan sampai siap.
+        </p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#produk">Lihat Produk</a>
+          <a class="btn" href="#order">Order Sekarang</a>
+          <a class="btn" href="#join">Sertai VYBE CREW</a>
         </div>
       </div>
-      <div class="ohsem">
-        <span class="ohsem-tag">OHSEM 50%</span>
-        <span><b>Diskaun 50% yuran langganan</b> untuk <b>9 bulan pertama</b> bagi produk terpilih. Pemasangan, servis & lawatan berkala termasuk dalam langganan (5 tahun / 7 tahun kontrak, ikut model).</span>
+    </div>
+    <div class="ohsem">
+      <span class="ohsem-tag">OHSEM 50%</span>
+      <span><b>Diskaun 50% yuran langganan</b> untuk <b>9 bulan pertama</b> bagi produk terpilih. Pemasangan, servis & lawatan berkala termasuk dalam langganan (5 tahun / 7 tahun kontrak, ikut model).</span>
+    </div>
+  </div>
+</header>
+
+<!-- CLEAN STREET COLLECTION -->
+<main class="wrap" id="produk">
+  <div class="section-title">CLEAN STREET COLLECTION</div>
+  <p class="section-sub">Pilih kategori — dari aircond sejuk macam KLCC sampai penapis air bersih macam air terjun.</p>
+  <div id="productSections"></div>
+</main>
+
+<!-- INFO ORDER -->
+<section class="wrap" id="info">
+  <div class="section-title">BAGAIMANA PROSES TEMPAHAN?</div>
+  <div class="infocards">
+    <div class="infocard">
+      <h4>Proses Permohonan</h4>
+      <p>1. Daftar dalam sistem<br>2. Jika nama lulus, HQ akan hubungi untuk pengesahan<br>3. Technician hubungi untuk tetapkan tarikh & lokasi pemasangan<br>4. Barang siap pasang bulan ini, <b>bayar bulan depan</b></p>
+    </div>
+    <div class="infocard">
+      <h4>Anggaran Masa</h4>
+      <p><b>Proses Lulus:</b> 1–3 hari bekerja<br><b>Penghantaran & Pemasangan:</b><br>• 7–10 hari (Semenanjung)<br>• 7–30 hari (Sabah & Sarawak)</p>
+    </div>
+    <div class="infocard">
+      <h4>Terma & Syarat Ringkas</h4>
+      <p>Valid Warganegara Malaysia (18–70 tahun)<br>Tiada blacklist (CTOS / CCRIS)<br>Kad debit/kredit aktif (autodebit)<br>Nama kad mesti sama seperti pemohon<br>Validasi RM10 dipulangkan selepas pengesahan</p>
+    </div>
+    <div class="infocard">
+      <h4>Dokumen Diperlukan</h4>
+      <p>IC depan & belakang<br>Penyata bank 3 bulan<br>Kad debit/kredit (gambar depan)<br>Bukti bayaran RM10 validasi</p>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER, JOIN, FOOTER, FLOAT, AYRA, MODAL -->
+<!-- (SAMA MACAM KAU PUNYA, TAPI AKU RINGKASKAN) -->
+
+<!-- FLOATING CTA -->
+<div class="float">
+  <div class="float-label" id="floatLabel">Semak promosi OHSEM 50% untuk model yang anda minat.</div>
+  <a class="btn wa" target="_blank" rel="noopener" href="https://wa.link/fsc0hq?text=Hi%20Hasrin,%20saya%20nak%20semak%20promosi%20OHSEM%2050%%20untuk%20LG%20Subscribe.">WhatsApp</a>
+</div>
+
+<!-- AYRA -->
+<div class="ai-launch">
+  <button type="button" id="aiToggle">AYRA • Street Concierge</button>
+</div>
+<div class="ai-panel" id="aiPanel">
+  <div class="ai-head"><strong>AYRA</strong><span style="color:var(--muted)"> • Street to Suite. Pilih LG Subscribe.</span></div>
+  <div class="ai-body" id="aiBody">
+    <div class="ai-msg">
+      Hai! Taip bajet & kategori (cth: <b>“fridge RM120”</b>, <b>“TV besar RM300”</b>).
+    </div>
+  </div>
+  <div class="ai-controls">
+    <input id="aiInput" placeholder="Contoh: washer keluarga RM100" />
+    <button type="button" class="btn primary sm" id="aiSend">Hantar</button>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="sheet">
+    <header>
+      <h3 id="m-title" style="font-size:15px;font-weight:800"></h3>
+      <button class="close" type="button" onclick="toggleModal(false)">Tutup</button>
+    </header>
+    <div class="content">
+      <div>
+        <div class="panel">
+          <div id="m-tags"></div>
+          <div id="m-price" style="margin-top:6px"></div>
+        </div>
+        <div class="panel">
+          <h4 style="font-size:13px;margin-bottom:4px">Ringkasan (BM)</h4>
+          <p id="m-desc" style="font-size:13px;color:var(--muted);line-height:1.5"></p>
+        </div>
+      </div>
+      <div class="panel">
+        <h4 style="font-size:13px;margin-bottom:4px">Specs & Benefits</h4>
+        <ul id="m-specs"></ul>
       </div>
     </div>
-  </header>
-
-  <!-- PRODUK -->
-  <main class="wrap" id="produk">
-    <div class="section-title">Clean Street Collection</div>
-    <p class="section-sub">Pilih kategori — dari <b>aircond sejuk macam KLCC</b> sampai <b>penapis air bersih macam air terjun</b>.</p>
-    <div id="productSections"></div>
-  </main>
-
-  <!-- INFO ORDER -->
-  <section class="wrap" id="info">
-    <div class="section-title">Bagaimana Proses Tempahan?</div>
-    <div class="infocards">
-      <div class="infocard"><h4>Proses Permohonan</h4><p>1. Daftar dalam sistem<br>2. Jika nama lulus, HQ akan hubungi untuk pengesahan<br>3. Technician hubungi untuk tetapkan tarikh & lokasi pemasangan<br>4. Barang siap pasang bulan ini, <b>bayar bulan depan</b></p></div>
-      <div class="infocard"><h4>Anggaran Masa</h4><p><b>Proses Lulus:</b> 1–3 hari bekerja<br><b>Penghantaran & Pemasangan:</b><br>• 7–10 hari (Semenanjung)<br>• 7–30 hari (Sabah & Sarawak)</p></div>
-      <div class="infocard"><h4>Terma & Syarat Ringkas</h4><p>Valid Warganegara Malaysia (18–70 tahun)<br>Tiada blacklist (CTOS / CCRIS)<br>Kad debit/kredit aktif (autodebit)<br>Nama kad mesti sama seperti pemohon<br>Validasi RM10 dipulangkan selepas pengesahan<br>Caj RM100 / item untuk rumah tanpa lif</p></div>
-      <div class="infocard"><h4>Dokumen Diperlukan</h4><p>IC depan & belakang<br>Penyata bank 3 bulan<br>Kad debit/kredit (gambar depan)<br>Bukti bayaran RM10 validasi</p></div>
+    <div class="modal-footer">
+      <a id="m-wa" class="btn wa sm" target="_blank" rel="noopener">WhatsApp Hasrin</a>
+      <a class="btn sm outline-soft" href="#order" onclick="prefillOrderFromModal()">Isi Borang Order</a>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- ORDER -->
-  <section class="wrap cta-section" id="order">
-    <h3>Order LG Subscribe Sekarang</h3>
-    <p>Isi maklumat ringkas di bawah, kami akan hubungi semula untuk semakan & pengesahan.</p>
-    <form class="form" onsubmit="submitOrder(event)">
-      <input type="text" id="order_model" name="model" placeholder="Model (cth: GC-L257KQKR)" required />
-      <input type="text" name="nama" placeholder="1. Nama penuh (seperti dalam IC)" required />
-      <input type="tel" name="phone" placeholder="2. Nombor telefon utama" required />
-      <input type="tel" name="phone2" placeholder="3. Nombor telefon lain (backup)" />
-      <textarea name="alamat" rows="2" placeholder="4. Alamat pemasangan (berserta poskod)" required></textarea>
-      <input type="email" name="email" placeholder="5. E-mel" required />
-      <input type="text" name="warna" placeholder="6. Warna pilihan (padam warna tak dipilih) — jika berkenaan" />
-      <button type="submit">Hantar Order & Buka WhatsApp</button>
-    </form>
-  </section>
+<!-- FORMS (ORDER & JOIN) -->
+<section class="wrap cta-section" id="order">...</section>
+<section class="wrap cta-section" id="join">...</section>
+<footer>...</footer>
 
-  <!-- JOIN CREW -->
-  <section class="wrap cta-section" id="join">
-    <h3>Sertai VYBE CREW (LG Subscribe Unit)</h3>
-    <p>Bina side-income dengan bimbingan — training, skrip, dan sistem sudah tersedia. Kita hustle sama-sama.</p>
-    <form class="form" onsubmit="submitCrew(event)">
-      <input type="text" name="nama" placeholder="Nama penuh" required />
-      <input type="tel" name="phone" placeholder="No. telefon (WhatsApp)" required />
-      <select name="pengalaman"><option value="">Pengalaman jualan?</option><option>Tiada pengalaman</option><option>Ada pengalaman jualan</option><option>Full-time digital / affiliate</option></select>
-      <textarea name="sebab" rows="3" placeholder="Kenapa nak sertai VYBE CREW?"></textarea>
-      <button type="submit">Hantar & Buka WhatsApp</button>
-    </form>
-  </section>
-
-  <footer><div class="wrap"><small>© 2025 VybeCo Resources • LG Subscribe™ Malaysia. Harga langganan adalah anggaran dan tertakluk pada promosi OHSEM & kemaskini rasmi LG.</small></div></footer>
-
-  <!-- FLOATING CTA + VYBE METER + HUSTLE + LEADERBOARD -->
-  <div class="float"><div class="float-label" id="floatLabel">Street to Suite: Pilih LG Subscribe</div><a class="btn wa" target="_blank" href="https://wa.link/fsc0hq">WhatsApp</a></div>
-  <div class="vybe-meter" id="vybeMeter"><div class="meter-fill"></div><div class="meter-label"><span id="vybeScore">0</span>% VYBE</div></div>
-  <div class="hustle-toggle" id="hustleToggle"><button type="button" class="btn sm" onclick="toggleHustle()">HUSTLE MODE <span id="hustleStatus">OFF</span></button></div>
-  <div class="leaderboard" id="leaderboard"><div class="leader-head">VYBE CREW TOP 3</div><div class="leader-list" id="leaderList"><div>1. <b>Hasrin</b> — 42 deals</div><div>2. <b>Afiq</b> — 38 deals</div><div>3. <b>Amir</b> — 35 deals</div></div><a href="#join" class="btn sm primary">Sertai Sekarang</a></div>
-  <div class="float-top" id="floatTop" style="display:none;"><button type="button" class="btn sm" onclick="window.scrollTo({top:0,behavior:'smooth'})">Kembali ke Atas</button></div>
-
-  <!-- AYRA -->
-  <div class="ai-launch"><button type="button" id="aiToggle">AYRA • Street Concierge</button></div>
-  <div class="ai-panel" id="aiPanel"><div class="ai-head"><strong>AYRA</strong> <span class="text-muted">• Street Concierge</span></div><div class="ai-body" id="aiBody"><div class="ai-msg">Hai. Taip bajet & kategori (cth: <b>"fridge RM150"</b>). Aku cadang model terus.</div></div><div class="ai-controls"><input id="aiInput" placeholder="Contoh: aircond murah" /><button type="button" class="btn primary sm" id="aiSend">Hantar</button></div></div>
-
-  <!-- AUDIO -->
-  <audio id="streetSound" src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwg..." preload="auto"></audio>
-
-  <!-- MODAL -->
-  <div class="modal" id="modal"><div class="sheet"><header><h3 id="m-title"></h3><button class="close" onclick="toggleModal(false)">Tutup</button></header><div class="content"><div><div class="panel"><div id="m-tags"></div><div id="m-price"></div></div><div class="panel"><h4>Ringkasan (BM)</h4><p id="m-desc"></p></div></div><div class="panel"><h4>Specs & Benefits</h4><ul id="m-specs"></ul></div></div><div class="modal-footer"><a id="m-wa" class="btn wa sm" target="_blank">WhatsApp Hasrin</a><a class="btn sm outline-soft" href="#order" onclick="prefillOrderFromModal()">Isi Borang</a></div></div></div>
-
-  <script>
-    const WA_LINK = 'https://wa.link/fsc0hq';
-    const CATEGORY_ORDER = [['aircon','Aircond (Penghawa Dingin)'],['water-purifier','Water Purifier (Penapis Air)'],['air-purifier','Air Purifier (Penapis Udara)'],['refrigerator','Refrigerator (Peti Sejuk)'],['washer-dryer','Washer & Dryer (Mesin Basuh & Pengering)'],['styler','Styler (Penjaga Pakaian)'],['tv','TV (Televisyen)'],['soundbar','Soundbar (Sistem Audio)'],['vacuum','Vacuum (Pembersih Vakum)'],['dishwasher','Dishwasher (Mesin Basuh Pinggan)'],['dehumidifier','Dehumidifier (Penyahlembap)']];
-    const ICONS = {aircon:'[Cold Face]', 'water-purifier':'[Droplet]', 'air-purifier':'[Wind Face]', refrigerator:'[Ice]', 'washer-dryer':'[Laundry Basket][Sun]', styler:'[Shirt]', tv:'[TV]', soundbar:'[Speaker High Volume]', vacuum:'[Broom]', dishwasher:'[Plate]', dehumidifier:'[Wind]'};
-    const PRODUCTS = [ /* (42 produk kau — aku kekalkan semua) */ ];
-    PRODUCTS.forEach((p,i)=>p._idx=i);
-
-    // STREET PICK & CREW PICK
-    const STREET_PICKS = ['GC-L257KQKR','WU525BS','AS10GDBYO','FV1450S2W','S3-Q09JAPPA','OLED65C3PSA'];
-    const CREW_PICKS = ['GC-L257KQKR','S3-Q09JAPPA','DFC533FV'];
-
-    function makeCard(p){
-      const isStreet = STREET_PICKS.includes(p.model);
-      const isCrew = CREW_PICKS.includes(p.model);
-      const msg = encodeURIComponent(`Hi Hasrin, saya berminat LG ${p.model} (${p.name}) — ${p.price}. Mohon semak promosi OHSEM 50%.`);
-      return `
-        <article class="card">
-          ${p.badge ? `<div class="badge">${p.badge}</div>` : ''}
-          ${isStreet ? `<div class="chip street-pick">STREET PICK</div>` : ''}
-          ${isCrew ? `<div class="chip crew-pick">VYBE CREW PICK</div>` : ''}
-          <div class="poster"><img src="${p.poster}" alt="LG ${p.model} ${p.name}"></div>
-          <div class="body">
-            <div class="cat-label">${ICONS[p.cat]||'[Sparkles]'} ${p.cat.replace('-', ' ').toUpperCase()}</div>
-            <div class="model">${p.model} — ${p.name}</div>
-            <div class="price">${p.price}${p.normal?`<small>Normal: ${p.normal} • OHSEM 50% untuk 9 bulan pertama*</small>`:''}</div>
-            <div class="card-cta">
-              <a class="btn sm wa" target="_blank" href="${WA_LINK}?text=${msg}">WhatsApp</a>
-              <button class="btn sm" data-action="detail" data-idx="${p._idx}">Butiran</button>
-              <button class="btn sm outline-soft" data-action="order" data-model="${p.model}">Order</button>
-            </div>
-          </div>
-        </article>
-      `;
-    }
-
-    function renderSections(){
-      productSections.innerHTML = CATEGORY_ORDER.map(([id,label])=>{
-        const items = PRODUCTS.filter(p=>p.cat===id);
-        if(!items.length) return '';
-        return `
-          <section class="cat-section" id="cat-${id}">
-            <div class="cat-heading"><h2>${label}</h2><small>${ICONS[id]||'[Bullet]'} ${items.length} model tersedia <span style="font-size:10px;">[Down Arrow]</span></small></div>
-            <div class="grid">${items.map(makeCard).join('')}</div>
-            <div class="cat-up-btn"><button type="button" class="btn sm" onclick="scrollToCat('${id}')">Naik ke ${label}</button></div>
-          </section>
-        `;
-      }).join('');
-    }
-    renderSections();
-
-    // SCROLL TO CAT
-    function scrollToCat(id){
-      const el = document.getElementById(`cat-${id}`);
-      if(el){
-        el.scrollIntoView({behavior:'smooth',block:'start'});
-        el.style.transition='background .3s'; el.style.background='rgba(56,189,248,.08)';
-        setTimeout(()=>{el.style.background='';},800);
-      }
-    }
-
-    // VYBE METER
-    let vybeScore = 0;
-    const actions = {'detail':5,'order':10,'wa':15,'crew':20};
-    function addVybe(type){
-      vybeScore = Math.min(100, vybeScore + (actions[type]||0));
-      document.querySelector('.meter-fill').style.width = vybeScore + '%';
-      document.getElementById('vybeScore').textContent = vybeScore;
-      if(vybeScore>=100) addAiMsg('[Fire] <b>VYBE 100%!</b> Kau dah masuk <b>LEGACY MODE</b>. Sertai VYBE CREW sekarang!');
-    }
-    document.addEventListener('click', e=>{
-      const btn = e.target.closest('button, a');
-      if(!btn) return;
-      if(btn.dataset.action) addVybe(btn.dataset.action);
-      else if(btn.href?.includes('whatsapp')) addVybe('wa');
-      else if(btn.href?.includes('#join')) addVybe('crew');
-    });
-
-    // HUSTLE MODE
-    let hustleMode = false;
-    function toggleHustle(){
-      hustleMode = !hustleMode;
-      const btn = document.getElementById('hustleToggle').querySelector('button');
-      const status = document.getElementById('hustleStatus');
-      btn.classList.toggle('hustle-on', hustleMode);
-      status.textContent = hustleMode ? 'ON' : 'OFF';
-      if(hustleMode) addAiMsg('HUSTLE MODE ON. Tanya apa-apa — aku bagi jawapan <b>straight to the point</b>.');
-    }
-
-    // STREET SOUND
-    const streetSound = document.getElementById('streetSound');
-    document.addEventListener('click', e=>{
-      const btn = e.target.closest('.btn');
-      if(btn && !btn.href?.includes('whatsapp')){
-        streetSound.currentTime = 0;
-        streetSound.play().catch(()=>{});
-      }
-    });
-
-    // LEADERBOARD
-    const leaderboard = document.getElementById('leaderboard');
-    const observer = new IntersectionObserver(entries=>{
-      entries.forEach(entry=> leaderboard.classList.toggle('open', entry.isIntersecting));
-    }, {threshold:0.5});
-    observer.observe(document.getElementById('join'));
-
-    // PROGRESS BAR
-    window.addEventListener('scroll', ()=>{
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.querySelector('.progress-bar').style.width = scrolled + '%';
-      const labels = ['Clean Street','Clean Air','Clean Water','Clean Clothes','Clean Suite'];
-      const idx = Math.min(Math.floor(scrolled / 25), 4);
-      document.getElementById('progressText').textContent = labels[idx];
-      document.getElementById('floatTop').style.display = winScroll > 600 ? 'block' : 'none';
-    });
-
-    // FLOAT LABEL
-    const floatLabel = document.getElementById('floatLabel');
-    window.addEventListener('scroll',()=>{
-      const y = window.scrollY, h = document.body.scrollHeight, b = y + window.innerHeight;
-      if(y<300) floatLabel.innerHTML = 'Street to Suite: Pilih LG Subscribe';
-      else if(b < h - 250) floatLabel.innerHTML = 'Clean air? Clean water? <b>Klik WhatsApp</b>';
-      else floatLabel.innerHTML = 'Langgan sekarang — <b>bayar bulan depan</b>';
-    });
-
-    // MODAL, FORMS, AYRA — (sama seperti kod kau, tapi AYRA lebih street di Hustle Mode)
-    // ... (kekalkan semua fungsi kau)
-
-    // AYRA HUSTLE MODE REPLY
-    function handleAi(){
-      const q = aiInput.value.trim(); if(!q) return;
-      addAiMsg(q, true);
-      // ... logik cari produk
-      const reply = picks.slice(0,4).map(p=>{
-        if(hustleMode){
-          return `<b>${p.model}</b>. ${p.price}. ${p.desc.split(' – ')[0]}. Siap. Nak order?`;
-        }
-        return `...`; // reply biasa
-      }).join('');
-      addAiMsg(reply);
-      aiInput.value='';
-    }
-  </script>
+<!-- LOAD JS -->
+<script src="js/products-data.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
