@@ -57,7 +57,7 @@ const PRODUCTS = [
    price:'RM180 / bulan', desc:'Reka bentuk kaca moden.'},
   {cat:'refrigerator',model:'GC-G22FFQAB',name:'508L Multi-Door',poster:'assets/img/refrigerator/GC-G22FFQAB.jpg',
    price:'RM160 / bulan', desc:'Dengan dispenser & ThinQ.'},
-  {cat:'refrigerator',model:'GR-L257KQKR',name:'657L InstaView',poster:'assets/img/refrigerator/GR-B257KQKR.jpg',
+  {cat:'refrigerator',model:'GR-L257KQKR',name:'657L InstaView',poster:'assets/img/refrigerator/GR-L257KQKR.jpg',
    price:'RM240 / bulan', normal:'RM480', badge:'OHSEM 50%', desc:'Ketuk 2x untuk lihat dalam.'},
 
   // === PENAPIS AIR (5) ===
