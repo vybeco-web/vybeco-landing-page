@@ -34,7 +34,6 @@
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; loading: lazy; }
     .wrap { max-width: 1180px; margin: 0 auto; padding: 20px; }
-
     /* NAV */
     .nav {
       position: sticky; top: 0; z-index: 50;
@@ -53,7 +52,6 @@
     .btn.wa { background: linear-gradient(90deg, #25D366, #128C7E); border-color: transparent; color: #020617; }
     .btn.sm { font-size: 12px; padding: 6px 11px; }
     .btn.outline-soft { background: transparent; border-style: dashed; }
-
     /* HERO */
     header { padding: 26px 0 4px; border-bottom: 1px solid rgba(15,23,42,.9); }
     h1 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 6px; color: var(--silver); letter-spacing: .04em; }
@@ -73,95 +71,66 @@
     .hero-tagline { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
     .hero-p { font-size: 14px; color: var(--muted); max-width: 440px; }
     .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
-
     /* SECTION TITLES */
     .section-title {
       font-weight: 800; font-size: 20px; letter-spacing: .08em; text-transform: uppercase;
       margin: 28px 0 4px; color: var(--silver);
     }
     .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
-
-    /* PRODUCT MASTER TABLE */
-    .product-table-wrap {
-      margin: 14px 0 20px;
-      border-radius: 16px;
-      border: 1px solid rgba(30,41,59,.9);
-      background: radial-gradient(circle at 0 0, rgba(56,189,248,.12), transparent 55%), #020617;
-      box-shadow: 0 18px 40px rgba(15,23,42,.7);
-      overflow: hidden;
-    }
-    .product-table-head {
-      padding: 10px 14px;
-      border-bottom: 1px solid rgba(30,41,59,.9);
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .product-table-head span {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--silver);
-    }
-    .product-table-head small {
-      font-size: 11px;
-      color: var(--muted);
-    }
-    .product-table-scroll {
-      overflow-x: auto;
-      max-height: 360px;
-      position: relative;
-    }
+    /* QUICK CATEGORY TABLE */
     .product-table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 860px;
+      margin: 16px 0 24px;
+      background: #05070f;
+      border-radius: 14px;
+      border: 1px solid rgba(30,41,59,.9);
+      padding: 12px 12px 10px;
       font-size: 12px;
     }
-    .product-table thead {
-      background: rgba(15,23,42,.98);
+    .product-table-title {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-weight: 600;
     }
-    .product-table th,
+    .product-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
     .product-table td {
-      padding: 8px 10px;
-      border-bottom: 1px solid rgba(30,41,59,.9);
+      padding: 4px 3px;
       text-align: left;
+    }
+    .product-table button {
+      width: 100%;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,.45);
+      background: #020617;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 6px;
       white-space: nowrap;
     }
-    .product-table thead th {
-      position: sticky;
-      top: 0;
-      z-index: 2;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--muted);
+    .product-table button span.icon {
+      font-size: 13px;
     }
-    .product-table tbody tr:nth-child(even) {
-      background: rgba(15,23,42,.7);
+    .product-table button:hover {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 1px rgba(56,189,248,.35);
     }
-    .product-table tbody tr:hover {
-      background: rgba(56,189,248,.08);
+    @media (max-width: 720px) {
+      .product-table table, .product-table tr, .product-table td {
+        display: block;
+        width: 100%;
+      }
+      .product-table td {
+        padding: 3px 0;
+      }
     }
-    .product-table .col-cat { width: 140px; font-weight: 600; font-size: 11px; color: var(--muted); }
-    .product-table .col-model { width: 120px; font-weight: 700; }
-    .product-table .col-name { width: 220px; color: var(--silver); }
-    .product-table .col-price { width: 110px; font-weight: 700; color: var(--ok); }
-    .product-table .col-actions {
-      width: 220px;
-    }
-    .table-actions {
-      display: inline-flex;
-      gap: 6px;
-      flex-wrap: nowrap;
-    }
-    .table-actions .btn {
-      padding: 5px 10px;
-      font-size: 11px;
-      border-radius: 999px;
-    }
-
     /* PRODUCT GRID */
     .cat-section { margin-top: 18px; }
     .cat-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 8px; margin-bottom: 6px; cursor: pointer; }
@@ -186,7 +155,6 @@
     .price { margin-top: 6px; font-weight: 800; font-size: 14px; color: var(--ok); }
     .price small { display: block; font-size: 11px; color: var(--muted); font-weight: 400; }
     .card-cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-
     /* INFO / CTA */
     .infocards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 10px; }
     .infocard {
@@ -225,7 +193,6 @@
       background: #020617; text-align: center;
       font-size: 12px; color: var(--muted);
     }
-
     /* MODAL */
     .modal {
       position: fixed; inset: 0; z-index: 70;
@@ -259,7 +226,6 @@
     #m-specs { padding-left: 18px; color: var(--ink); line-height: 1.6; }
     #m-specs li { margin-bottom: 3px; }
     .modal-footer { display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid rgba(30,41,59,.9); background: #05070f; }
-
     /* FLOATING CTA & AYRA */
     .float {
       position: fixed; right: 16px; bottom: 16px; z-index: 80;
@@ -297,7 +263,6 @@
       background: #05070f; border: 1px solid rgba(30,41,59,.9);
     }
     .ai-msg.me { background: #0b1220; border-color: rgba(56,189,248,.5); }
-
     .ai-controls {
       display: flex; gap: 8px; padding: 9px 10px; border-top: 1px solid rgba(30,41,59,.9);
       background: #020617;
@@ -308,27 +273,23 @@
       font-size: 12px; padding: 8px 11px;
     }
     .ai-controls .btn { font-size: 12px; padding: 7px 12px; }
-
-    /* New Utility Classes */
+    /* New Classes */
     .text-muted { color: var(--muted); }
     .font-bold { font-weight: 700; }
     .line-height-15 { line-height: 1.5; }
     .font-15 { font-size: 15px; }
     .font-13 { font-size: 13px; margin-bottom: 4px; }
     .hidden { display: none; }
-
     /* Media Queries */
     @media (max-width: 920px) {
       .hero-grid { grid-template-columns: 1fr; }
       .hero-photo { margin: 0 auto; }
       .sheet .content { grid-template-columns: 1fr; }
-      .product-table-scroll { max-height: 280px; }
     }
     @media (max-width: 640px) {
       .brandbar { grid-template-columns: repeat(2, 1fr); }
       .nav-row { flex-direction: column; align-items: flex-start; }
       .nav-links { flex-direction: column; }
-      .product-table-head { padding: 9px 10px; }
     }
   </style>
 </head>
@@ -344,7 +305,6 @@
     </div>
   </div>
 </div>
-
 <!-- HERO -->
 <header>
   <div class="wrap">
@@ -376,7 +336,6 @@
     </div>
   </div>
 </header>
-
 <!-- PRODUK -->
 <main class="wrap" id="produk">
   <div class="section-title">Produk LG Subscribe</div>
@@ -384,34 +343,34 @@
     Pilih kategori, tengok harga bulanan standard. Klik <b>Butiran</b> untuk lihat spesifikasi & kelebihan penuh (Bahasa Melayu & English ringkas).
   </p>
 
-  <!-- PRODUCT MASTER TABLE -->
-  <div class="product-table-wrap">
-    <div class="product-table-head">
-      <span>Senarai Pantas Semua Model</span>
-      <small>Scroll kiri-kanan di mobile. Klik butang di hujung baris untuk WhatsApp, butiran atau terus isi order.</small>
-    </div>
-    <div class="product-table-scroll">
-      <table class="product-table" id="productTable">
-        <thead>
-          <tr>
-            <th class="col-cat">Kategori</th>
-            <th class="col-model">Model</th>
-            <th class="col-name">Nama Produk</th>
-            <th class="col-price">Harga / Bulan</th>
-            <th class="col-actions">Tindakan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Diisi oleh JS -->
-        </tbody>
-      </table>
-    </div>
+  <!-- QUICK CATEGORY TABLE -->
+  <div class="product-table" aria-label="Pilih kategori produk LG Subscribe">
+    <p class="product-table-title">Pilih kategori cepat (klik untuk lompat ke bahagian produk):</p>
+    <table>
+      <tr>
+        <td><button type="button" data-target="cat-refrigerator"><span class="icon">🧊</span><span>Refrigerator</span></button></td>
+        <td><button type="button" data-target="cat-water-purifier"><span class="icon">💧</span><span>Water Purifier</span></button></td>
+        <td><button type="button" data-target="cat-air-purifier"><span class="icon">🌬️</span><span>Air Purifier</span></button></td>
+        <td><button type="button" data-target="cat-washer"><span class="icon">🧺</span><span>Washer</span></button></td>
+        <td><button type="button" data-target="cat-dryer"><span class="icon">🌤️</span><span>Dryer</span></button></td>
+        <td><button type="button" data-target="cat-washtower"><span class="icon">🧺</span><span>WashTower</span></button></td>
+      </tr>
+      <tr>
+        <td><button type="button" data-target="cat-aircond"><span class="icon">❄️</span><span>Aircond</span></button></td>
+        <td><button type="button" data-target="cat-tv"><span class="icon">📺</span><span>TV</span></button></td>
+        <td><button type="button" data-target="cat-soundbar"><span class="icon">🔊</span><span>Soundbar</span></button></td>
+        <td><button type="button" data-target="cat-styler"><span class="icon">👔</span><span>Styler</span></button></td>
+        <td><button type="button" data-target="cat-dishwasher"><span class="icon">🍽️</span><span>Dishwasher</span></button></td>
+        <td><button type="button" data-target="cat-vacuum"><span class="icon">🧹</span><span>Vacuum</span></button></td>
+      </tr>
+      <tr>
+        <td><button type="button" data-target="cat-dehumidifier"><span class="icon">💨</span><span>Dehumidifier</span></button></td>
+      </tr>
+    </table>
   </div>
 
-  <!-- GRID PER KATEGORI -->
   <div id="productSections"></div>
 </main>
-
 <!-- INFO ORDER -->
 <section class="wrap" id="info">
   <div class="section-title">Bagaimana Proses Tempahan?</div>
@@ -458,7 +417,6 @@
     </div>
   </div>
 </section>
-
 <!-- ORDER -->
 <section class="wrap cta-section" id="order">
   <h3>Order LG Subscribe Sekarang</h3>
@@ -474,7 +432,6 @@
     <button type="submit">Hantar Order & Buka WhatsApp</button>
   </form>
 </section>
-
 <!-- JOIN CREW -->
 <section class="wrap cta-section" id="join">
   <h3>Sertai VYBE CREW (LG Subscribe Unit)</h3>
@@ -492,7 +449,6 @@
     <button type="submit">Hantar & Buka WhatsApp</button>
   </form>
 </section>
-
 <footer>
   <div class="wrap">
     <small>
@@ -500,13 +456,11 @@
     </small>
   </div>
 </footer>
-
 <!-- FLOATING CTA -->
 <div class="float">
   <div class="float-label" id="floatLabel">🔍 Semak model LG Subscribe yang anda minat.</div>
   <a class="btn wa" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=60194124033&text=Hi%20Hasrin,%20saya%20nak%20semak%20LG%20Subscribe.">WhatsApp</a>
 </div>
-
 <!-- AYRA -->
 <div class="ai-launch">
   <button type="button" id="aiToggle">AYRA LG • Cari Produk</button>
@@ -524,7 +478,6 @@
     <button type="button" class="btn primary sm" id="aiSend">Hantar</button>
   </div>
 </div>
-
 <!-- MODAL DETAIL -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
   <div class="sheet">
@@ -732,19 +685,19 @@
      benefits:['Jimat ruang condo.']},
 
     // Aircond
-    {cat:'aircond',model:'S3-Q09JAPPA',name:'Dual Inverter 1.0HP',poster:'assets/img/aircon/S3-Q09JAPPA.jpg',
+    {cat:'aircond',model:'S3-Q09JAPPA',name:'Dual Inverter 1.0HP',poster:'assets/img/aircond/S3-Q09JAPPA.jpg',
      price:'RM80 / bulan', desc:'Standard inverter bilik tidur.',
      specs:['Fast Cooling.', 'Allergy Filter.'],
      benefits:['Jimat 70% tenaga.']},
-    {cat:'aircond',model:'S3-Q12JA3BA',name:'Dual Inverter 1.5HP',poster:'assets/img/aircon/S3-Q12JA3BA.jpg',
+    {cat:'aircond',model:'S3-Q12JA3BA',name:'Dual Inverter 1.5HP',poster:'assets/img/aircond/S3-Q12JA3BA.jpg',
      price:'RM90 / bulan', desc:'Untuk bilik sederhana.',
      specs:['ThinQ Wi-Fi.', 'Dehumidify.'],
      benefits:['Kawal remote app.']},
-    {cat:'aircond',model:'S3-Q24K2RPA',name:'ArtCool 2.5HP',poster:'assets/img/aircon/S3-Q24K2RPA.jpg',
+    {cat:'aircond',model:'S3-Q24K2RPA',name:'ArtCool 2.5HP',poster:'assets/img/aircond/S3-Q24K2RPA.jpg',
      price:'RM280 / bulan', desc:'Design premium ruang tamu.',
      specs:['Glass Panel.', 'Jet Mode.'],
      benefits:['Estetik moden.']},
-    {cat:'aircond',model:'S3-Q12JARPA',name:'ArtCool 1.5HP',poster:'assets/img/aircon/S3-Q12JARPA.jpg',
+    {cat:'aircond',model:'S3-Q12JARPA',name:'ArtCool 1.5HP',poster:'assets/img/aircond/S3-Q12JARPA.jpg',
      price:'RM130 / bulan', desc:'ArtCool series.',
      specs:['Mood Light.', 'Voice Control.'],
      benefits:['Integrasi Google Home.']},
@@ -830,9 +783,8 @@
      benefits:['Jimat 40% tenaga.']},
   ];
 
-  PRODUCTS.forEach((p,i)=>p._idx=i);
+  PRODUCTS.forEach((p, i) => p._idx = i);
 
-  // RENDER CARD
   function makeCard(p){
     const msg = encodeURIComponent(`Hi Hasrin, saya berminat LG ${p.model} (${p.name}) — ${p.price}.`);
     return `
@@ -857,7 +809,6 @@
     `;
   }
 
-  // RENDER GRID PER CATEGORY
   function renderSections(){
     const productSections = document.getElementById('productSections');
     productSections.innerHTML = CATEGORY_ORDER.map(([id,label])=>{
@@ -879,34 +830,23 @@
 
   function toggleCat(id) {
     const grid = document.querySelector(`#cat-${id} .grid`);
+    if(!grid) return;
     grid.classList.toggle('hidden');
   }
 
-  // MASTER TABLE RENDER
-  function renderTable() {
-    const table = document.getElementById('productTable');
-    if (!table) return;
-    const tbody = table.querySelector('tbody');
-    tbody.innerHTML = PRODUCTS.map(p => {
-      const msg = encodeURIComponent(`Hi Hasrin, saya berminat LG ${p.model} (${p.name}) — ${p.price}.`);
-      const catLabel = (ICONS[p.cat] || '✨') + ' ' + p.cat.replace('-', ' ').toUpperCase();
-      return `
-        <tr>
-          <td class="col-cat">${catLabel}</td>
-          <td class="col-model">${p.model}</td>
-          <td class="col-name">${p.name}</td>
-          <td class="col-price">${p.price}</td>
-          <td class="col-actions">
-            <div class="table-actions">
-              <a class="btn sm wa" target="_blank" rel="noopener" href="${WA_LINK}&text=${msg}">WA</a>
-              <button class="btn sm" type="button" onclick="showDetails(${p._idx})">Butiran</button>
-              <button class="btn sm outline-soft" type="button" onclick="prefillOrder('${p.model}')">Order</button>
-            </div>
-          </td>
-        </tr>
-      `;
-    }).join('');
-  }
+  renderSections();
+
+  // Scroll dari QUICK TABLE
+  document.querySelectorAll('.product-table button[data-target]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const targetId = btn.getAttribute('data-target');
+      const el = document.getElementById(targetId);
+      if(!el) return;
+      const offset = 80; // tolak tinggi nav
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({top, behavior:'smooth'});
+    });
+  });
 
   // Modal
   const modal = document.getElementById('modal');
@@ -918,7 +858,10 @@
   const mWa = document.getElementById('m-wa');
   let currentProduct = null;
 
-  function toggleModal(show) { modal.classList.toggle('open', !!show); if (show) modal.focus(); }
+  function toggleModal(show) {
+    modal.classList.toggle('open', !!show);
+    if (show) modal.focus();
+  }
 
   function showDetails(idx){
     const p = PRODUCTS[idx]; if(!p) return;
@@ -939,9 +882,11 @@
     window.location.hash = '#order';
   }
 
-  function prefillOrderFromModal(){ if(currentProduct) prefillOrder(currentProduct.model); }
+  function prefillOrderFromModal(){
+    if(currentProduct) prefillOrder(currentProduct.model);
+  }
 
-  // Events
+  // Events pada kad
   document.getElementById('productSections').addEventListener('click', (e)=>{
     const btn = e.target.closest('button[data-action]');
     if(!btn) return;
@@ -957,7 +902,15 @@
     e.preventDefault();
     const f = e.target;
     const msg = encodeURIComponent(
-      `ORDER LG Subscribe\nModel: ${f.model.value}\nNama: ${f.nama.value}\nPhone: ${f.phone.value}\nPhone2: ${f.phone2.value||'-'}\nAlamat: ${f.alamat.value}\nEmail: ${f.email.value}\nWarna: ${f.warna.value||'-'}\nMohon proses langganan.`
+      `ORDER LG Subscribe`+
+      `\nModel: ${f.model.value}`+
+      `\nNama: ${f.nama.value}`+
+      `\nPhone: ${f.phone.value}`+
+      `\nPhone2: ${f.phone2.value||'-'}`+
+      `\nAlamat: ${f.alamat.value}`+
+      `\nEmail: ${f.email.value}`+
+      `\nWarna: ${f.warna.value||'-'}`+
+      `\nMohon proses langganan.`
     );
     window.open(`${WA_LINK}&text=${msg}`, '_blank');
     f.reset();
@@ -967,7 +920,11 @@
     e.preventDefault();
     const f = e.target;
     const msg = encodeURIComponent(
-      `Hi Hasrin, nak sertai VYBE CREW.\nNama: ${f.nama.value}\nPhone: ${f.phone.value}\nPengalaman: ${f.pengalaman.value||'-'}\nSebab: ${f.sebab.value||'-'}`
+      `Hi Hasrin, nak sertai VYBE CREW.`+
+      `\nNama: ${f.nama.value}`+
+      `\nPhone: ${f.phone.value}`+
+      `\nPengalaman: ${f.pengalaman.value||'-'}`+
+      `\nSebab: ${f.sebab.value||'-'}`
     );
     window.open(`${WA_LINK}&text=${msg}`, '_blank');
     f.reset();
@@ -1027,7 +984,7 @@
       return `
         <div style="margin-top:6px;border-top:1px solid rgba(30,41,59,.9);padding-top:6px">
           <b>${p.model} — ${p.name}</b><br><small>${p.price}</small>
-          <div style="margin-top:6px;display:flex;gap:6px">
+          <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
             <button class="btn sm" type="button" onclick="prefillOrder('${p.model}')">Order</button>
             <button class="btn sm primary" type="button" onclick="showDetails(${p._idx})">Butiran</button>
             <a class="btn sm wa" target="_blank" href="${WA_LINK}&text=${msg}">WhatsApp</a>
@@ -1038,10 +995,6 @@
     addAiMsg('Model sesuai: ' + reply);
     aiInput.value = '';
   }
-
-  // INIT
-  renderSections();
-  renderTable();
 </script>
 </body>
 </html>
