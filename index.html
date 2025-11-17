@@ -34,6 +34,7 @@
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; loading: lazy; }
     .wrap { max-width: 1180px; margin: 0 auto; padding: 20px; }
+
     /* NAV */
     .nav {
       position: sticky; top: 0; z-index: 50;
@@ -52,6 +53,7 @@
     .btn.wa { background: linear-gradient(90deg, #25D366, #128C7E); border-color: transparent; color: #020617; }
     .btn.sm { font-size: 12px; padding: 6px 11px; }
     .btn.outline-soft { background: transparent; border-style: dashed; }
+
     /* HERO */
     header { padding: 26px 0 4px; border-bottom: 1px solid rgba(15,23,42,.9); }
     h1 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 6px; color: var(--silver); letter-spacing: .04em; }
@@ -71,12 +73,95 @@
     .hero-tagline { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
     .hero-p { font-size: 14px; color: var(--muted); max-width: 440px; }
     .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+
     /* SECTION TITLES */
     .section-title {
       font-weight: 800; font-size: 20px; letter-spacing: .08em; text-transform: uppercase;
       margin: 28px 0 4px; color: var(--silver);
     }
     .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+
+    /* PRODUCT MASTER TABLE */
+    .product-table-wrap {
+      margin: 14px 0 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(30,41,59,.9);
+      background: radial-gradient(circle at 0 0, rgba(56,189,248,.12), transparent 55%), #020617;
+      box-shadow: 0 18px 40px rgba(15,23,42,.7);
+      overflow: hidden;
+    }
+    .product-table-head {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(30,41,59,.9);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .product-table-head span {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+    .product-table-head small {
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .product-table-scroll {
+      overflow-x: auto;
+      max-height: 360px;
+      position: relative;
+    }
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 860px;
+      font-size: 12px;
+    }
+    .product-table thead {
+      background: rgba(15,23,42,.98);
+    }
+    .product-table th,
+    .product-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(30,41,59,.9);
+      text-align: left;
+      white-space: nowrap;
+    }
+    .product-table thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+    }
+    .product-table tbody tr:nth-child(even) {
+      background: rgba(15,23,42,.7);
+    }
+    .product-table tbody tr:hover {
+      background: rgba(56,189,248,.08);
+    }
+    .product-table .col-cat { width: 140px; font-weight: 600; font-size: 11px; color: var(--muted); }
+    .product-table .col-model { width: 120px; font-weight: 700; }
+    .product-table .col-name { width: 220px; color: var(--silver); }
+    .product-table .col-price { width: 110px; font-weight: 700; color: var(--ok); }
+    .product-table .col-actions {
+      width: 220px;
+    }
+    .table-actions {
+      display: inline-flex;
+      gap: 6px;
+      flex-wrap: nowrap;
+    }
+    .table-actions .btn {
+      padding: 5px 10px;
+      font-size: 11px;
+      border-radius: 999px;
+    }
+
     /* PRODUCT GRID */
     .cat-section { margin-top: 18px; }
     .cat-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 8px; margin-bottom: 6px; cursor: pointer; }
@@ -101,6 +186,7 @@
     .price { margin-top: 6px; font-weight: 800; font-size: 14px; color: var(--ok); }
     .price small { display: block; font-size: 11px; color: var(--muted); font-weight: 400; }
     .card-cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
     /* INFO / CTA */
     .infocards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 10px; }
     .infocard {
@@ -139,6 +225,7 @@
       background: #020617; text-align: center;
       font-size: 12px; color: var(--muted);
     }
+
     /* MODAL */
     .modal {
       position: fixed; inset: 0; z-index: 70;
@@ -172,6 +259,7 @@
     #m-specs { padding-left: 18px; color: var(--ink); line-height: 1.6; }
     #m-specs li { margin-bottom: 3px; }
     .modal-footer { display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid rgba(30,41,59,.9); background: #05070f; }
+
     /* FLOATING CTA & AYRA */
     .float {
       position: fixed; right: 16px; bottom: 16px; z-index: 80;
@@ -209,6 +297,7 @@
       background: #05070f; border: 1px solid rgba(30,41,59,.9);
     }
     .ai-msg.me { background: #0b1220; border-color: rgba(56,189,248,.5); }
+
     .ai-controls {
       display: flex; gap: 8px; padding: 9px 10px; border-top: 1px solid rgba(30,41,59,.9);
       background: #020617;
@@ -219,29 +308,27 @@
       font-size: 12px; padding: 8px 11px;
     }
     .ai-controls .btn { font-size: 12px; padding: 7px 12px; }
-    /* New Classes */
+
+    /* New Utility Classes */
     .text-muted { color: var(--muted); }
     .font-bold { font-weight: 700; }
     .line-height-15 { line-height: 1.5; }
     .font-15 { font-size: 15px; }
     .font-13 { font-size: 13px; margin-bottom: 4px; }
-    .outright-pricing {
-      background: #f8f9fa; padding: 12px; border-radius: 8px; font-size: 0.9rem;
-    }
-    .outright-pricing h6 { margin: 0 0 8px; font-weight: 600; }
-    .list-inline { display: flex; gap: 16px; flex-wrap: wrap; }
-    .list-inline li { margin: 0; }
     .hidden { display: none; }
+
     /* Media Queries */
     @media (max-width: 920px) {
       .hero-grid { grid-template-columns: 1fr; }
       .hero-photo { margin: 0 auto; }
       .sheet .content { grid-template-columns: 1fr; }
+      .product-table-scroll { max-height: 280px; }
     }
     @media (max-width: 640px) {
       .brandbar { grid-template-columns: repeat(2, 1fr); }
       .nav-row { flex-direction: column; align-items: flex-start; }
       .nav-links { flex-direction: column; }
+      .product-table-head { padding: 9px 10px; }
     }
   </style>
 </head>
@@ -257,6 +344,7 @@
     </div>
   </div>
 </div>
+
 <!-- HERO -->
 <header>
   <div class="wrap">
@@ -288,12 +376,42 @@
     </div>
   </div>
 </header>
+
 <!-- PRODUK -->
 <main class="wrap" id="produk">
   <div class="section-title">Produk LG Subscribe</div>
-  <p class="section-sub">Pilih kategori, tengok harga bulanan standard. Klik <b>Butiran</b> untuk lihat spesifikasi & kelebihan penuh (Bahasa Melayu & English ringkas).</p>
+  <p class="section-sub">
+    Pilih kategori, tengok harga bulanan standard. Klik <b>Butiran</b> untuk lihat spesifikasi & kelebihan penuh (Bahasa Melayu & English ringkas).
+  </p>
+
+  <!-- PRODUCT MASTER TABLE -->
+  <div class="product-table-wrap">
+    <div class="product-table-head">
+      <span>Senarai Pantas Semua Model</span>
+      <small>Scroll kiri-kanan di mobile. Klik butang di hujung baris untuk WhatsApp, butiran atau terus isi order.</small>
+    </div>
+    <div class="product-table-scroll">
+      <table class="product-table" id="productTable">
+        <thead>
+          <tr>
+            <th class="col-cat">Kategori</th>
+            <th class="col-model">Model</th>
+            <th class="col-name">Nama Produk</th>
+            <th class="col-price">Harga / Bulan</th>
+            <th class="col-actions">Tindakan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Diisi oleh JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- GRID PER KATEGORI -->
   <div id="productSections"></div>
 </main>
+
 <!-- INFO ORDER -->
 <section class="wrap" id="info">
   <div class="section-title">Bagaimana Proses Tempahan?</div>
@@ -340,6 +458,7 @@
     </div>
   </div>
 </section>
+
 <!-- ORDER -->
 <section class="wrap cta-section" id="order">
   <h3>Order LG Subscribe Sekarang</h3>
@@ -355,6 +474,7 @@
     <button type="submit">Hantar Order & Buka WhatsApp</button>
   </form>
 </section>
+
 <!-- JOIN CREW -->
 <section class="wrap cta-section" id="join">
   <h3>Sertai VYBE CREW (LG Subscribe Unit)</h3>
@@ -372,6 +492,7 @@
     <button type="submit">Hantar & Buka WhatsApp</button>
   </form>
 </section>
+
 <footer>
   <div class="wrap">
     <small>
@@ -379,11 +500,13 @@
     </small>
   </div>
 </footer>
+
 <!-- FLOATING CTA -->
 <div class="float">
   <div class="float-label" id="floatLabel">🔍 Semak model LG Subscribe yang anda minat.</div>
   <a class="btn wa" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=60194124033&text=Hi%20Hasrin,%20saya%20nak%20semak%20LG%20Subscribe.">WhatsApp</a>
 </div>
+
 <!-- AYRA -->
 <div class="ai-launch">
   <button type="button" id="aiToggle">AYRA LG • Cari Produk</button>
@@ -401,6 +524,7 @@
     <button type="button" class="btn primary sm" id="aiSend">Hantar</button>
   </div>
 </div>
+
 <!-- MODAL DETAIL -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
   <div class="sheet">
@@ -430,8 +554,10 @@
     </div>
   </div>
 </div>
+
 <script>
   const WA_LINK = 'https://api.whatsapp.com/send?phone=60194124033';
+
   const CATEGORY_ORDER = [
     ['refrigerator', 'Refrigerator'],
     ['water-purifier', 'Water Purifier'],
@@ -439,7 +565,7 @@
     ['washer', 'Washer'],
     ['dryer', 'Dryer'],
     ['washtower', 'WashTower'],
-    ['aircon', 'Air Conditioner'],
+    ['aircond', 'Air Conditioner'],
     ['tv', 'TV'],
     ['soundbar', 'Soundbar'],
     ['styler', 'Styler'],
@@ -447,11 +573,23 @@
     ['vacuum', 'Vacuum'],
     ['dehumidifier', 'Dehumidifier'],
   ];
+
   const ICONS = {
-    'refrigerator': '🧊', 'water-purifier': '💧', 'air-purifier': '🌬️', 'washer': '🧺', 'dryer': '🌤️',
-    'washtower': '🧺', 'aircon': '❄️', 'tv': '📺', 'soundbar': '🔊', 'styler': '👔',
-    'dishwasher': '🍽️', 'vacuum': '🧹', 'dehumidifier': '💨'
+    'refrigerator': '🧊',
+    'water-purifier': '💧',
+    'air-purifier': '🌬️',
+    'washer': '🧺',
+    'dryer': '🌤️',
+    'washtower': '🧺',
+    'aircond': '❄️',
+    'tv': '📺',
+    'soundbar': '🔊',
+    'styler': '👔',
+    'dishwasher': '🍽️',
+    'vacuum': '🧹',
+    'dehumidifier': '💨'
   };
+
   const PRODUCTS = [
     // Refrigerator
     {cat:'refrigerator',model:'GC-L257KQKR',name:'641L Side-by-Side',poster:'assets/img/refrigerator/GC-L257KQKR.jpg',
@@ -478,6 +616,7 @@
      price:'RM160 / bulan', desc:'Multi-door dengan dispenser.',
      specs:['ThinQ AI – kawal remote.', 'Multi Air Flow.'],
      benefits:['Mudah kawal via app.']},
+
     // Water Purifier
     {cat:'water-purifier',model:'WU525BS',name:'Atom-U Hot/Cold',poster:'assets/img/water-purifier/WU525BS.jpg',
      price:'RM110 / bulan', desc:'Penapis tanpa tangki dengan suhu on-demand.',
@@ -499,6 +638,7 @@
      price:'RM60 / bulan', desc:'MX series untuk kebersihan tinggi.',
      specs:['Multi-stage filter.', 'Auto clean.'],
      benefits:['Kurang maintenance.']},
+
     // Air Purifier
     {cat:'air-purifier',model:'AS10GDBYO',name:'Alpha Pet Dual Booster',poster:'assets/img/air-purifier/AS10GDBYO.jpg',
      price:'RM105 / bulan', desc:'360° untuk ruang besar dengan pet filter.',
@@ -540,6 +680,7 @@
      price:'RM50 / bulan', desc:'HIT untuk hygiene.',
      specs:['UVnano.', 'Auto mode.'],
      benefits:['Kurang virus.']},
+
     // Washer
     {cat:'washer',model:'FV1450S2W',name:'Front Load 10.5kg',poster:'assets/img/washer/FV1450S2W.jpg',
      price:'RM200 / bulan', desc:'Front load dengan AI DD.',
@@ -573,6 +714,7 @@
      price:'RM90 / bulan', desc:'Standard front load.',
      specs:['Inverter.', 'Allergy Care.'],
      benefits:['Lembut kain.']},
+
     // Dryer
     {cat:'dryer',model:'VD-H9066WSR',name:'Heat Pump 9kg',poster:'assets/img/dryer/VD-H9066WSR.jpg',
      price:'RM220 / bulan', desc:'Heat pump lembut kain.',
@@ -582,28 +724,31 @@
      price:'RM100 / bulan', desc:'Standard heat pump.',
      specs:['Auto Cleaning Condenser.', 'Wrinkle Care.'],
      benefits:['Tak bergantung cuaca.']},
+
     // WashTower
     {cat:'washtower',model:'WT2520MHGER',name:'WashTower AI DD',poster:'assets/img/washtower/WT2520MHGER.jpg',
      price:'RM560 / bulan', desc:'Washer + dryer menara.',
      specs:['Center Control.', 'AI DD.'],
      benefits:['Jimat ruang condo.']},
-    // Aircon (folder renamed to aircond)
-    {cat:'aircon',model:'S3-Q09JAPPA',name:'Dual Inverter 1.0HP',poster:'assets/img/aircond/S3-Q09JAPPA.jpg',
+
+    // Aircond
+    {cat:'aircond',model:'S3-Q09JAPPA',name:'Dual Inverter 1.0HP',poster:'assets/img/aircon/S3-Q09JAPPA.jpg',
      price:'RM80 / bulan', desc:'Standard inverter bilik tidur.',
      specs:['Fast Cooling.', 'Allergy Filter.'],
      benefits:['Jimat 70% tenaga.']},
-    {cat:'aircon',model:'S3-Q12JA3BA',name:'Dual Inverter 1.5HP',poster:'assets/img/aircond/S3-Q12JA3BA.jpg',
+    {cat:'aircond',model:'S3-Q12JA3BA',name:'Dual Inverter 1.5HP',poster:'assets/img/aircon/S3-Q12JA3BA.jpg',
      price:'RM90 / bulan', desc:'Untuk bilik sederhana.',
      specs:['ThinQ Wi-Fi.', 'Dehumidify.'],
      benefits:['Kawal remote app.']},
-    {cat:'aircon',model:'S3-Q24K2RPA',name:'ArtCool 2.5HP',poster:'assets/img/aircond/S3-Q24K2RPA.jpg',
+    {cat:'aircond',model:'S3-Q24K2RPA',name:'ArtCool 2.5HP',poster:'assets/img/aircon/S3-Q24K2RPA.jpg',
      price:'RM280 / bulan', desc:'Design premium ruang tamu.',
      specs:['Glass Panel.', 'Jet Mode.'],
      benefits:['Estetik moden.']},
-    {cat:'aircon',model:'S3-Q12JARPA',name:'ArtCool 1.5HP',poster:'assets/img/aircond/S3-Q12JARPA.jpg',
+    {cat:'aircond',model:'S3-Q12JARPA',name:'ArtCool 1.5HP',poster:'assets/img/aircon/S3-Q12JARPA.jpg',
      price:'RM130 / bulan', desc:'ArtCool series.',
      specs:['Mood Light.', 'Voice Control.'],
      benefits:['Integrasi Google Home.']},
+
     // TV
     {cat:'tv',model:'OLED77B5PSA',name:'77" OLED B5 4K',poster:'assets/img/tv/OLED77B5PSA.jpg',
      price:'RM1120 / bulan', desc:'OLED untuk home cinema.',
@@ -629,6 +774,7 @@
      price:'RM135 / bulan', desc:'Evo AI 2025.',
      specs:['Dynamic Tone Mapping.', 'AI Picture.'],
      benefits:['Upscale auto.']},
+
     // Soundbar
     {cat:'soundbar',model:'S90QY',name:'Dolby Atmos 5.1.3',poster:'assets/img/soundbar/S90QY.jpg',
      price:'RM320 / bulan', desc:'Premium audio.',
@@ -638,11 +784,13 @@
      price:'RM60 / bulan', desc:'High res audio.',
      specs:['Dolby Atmos.', 'Rear Speakers.'],
      benefits:['Cinema at home.']},
+
     // Styler
     {cat:'styler',model:'S3WF',name:'TrueSteam Styler',poster:'assets/img/styler/S3WF.jpg',
      price:'RM180 / bulan', desc:'Almari stim pakaian.',
      specs:['Moving Hanger.', 'Steam Sanitize.'],
      benefits:['Kurang dry clean.']},
+
     // Dishwasher
     {cat:'dishwasher',model:'DFC533FV',name:'QuadWash TrueSteam Prime Silver',poster:'assets/img/dishwasher/DFC533FV.jpg',
      price:'RM130 / bulan', desc:'Wi-Fi enabled, launching 25 Sep 2025 (Klang Valley).',
@@ -652,6 +800,7 @@
      price:'RM150 / bulan', desc:'Auto open door.',
      specs:['Dual Zone.', 'EasyRack Plus.'],
      benefits:['Kering natural, fleksibel rak.']},
+
     // Vacuum
     {cat:'vacuum',model:'A9T-RMAX',name:'CordZero Tower',poster:'assets/img/vacuum/A9T-RMAX.jpg',
      price:'RM180 / bulan', desc:'All-in-one tower.',
@@ -665,6 +814,7 @@
      price:'RM90 / bulan', desc:'Standard cordless.',
      specs:['2 bateri.', 'Total Care Kit.'],
      benefits:['90 min runtime.']},
+
     // Dehumidifier
     {cat:'dehumidifier',model:'DD16GMWEE',name:'16L Smart',poster:'assets/img/dehumidifier/DD16GMWEE.jpg',
      price:'RM140 / bulan', desc:'Kawal lembapan.',
@@ -679,8 +829,10 @@
      specs:['Smart Control.', 'Bucket Full Alert.'],
      benefits:['Jimat 40% tenaga.']},
   ];
+
   PRODUCTS.forEach((p,i)=>p._idx=i);
-  // Render Functions
+
+  // RENDER CARD
   function makeCard(p){
     const msg = encodeURIComponent(`Hi Hasrin, saya berminat LG ${p.model} (${p.name}) — ${p.price}.`);
     return `
@@ -704,6 +856,8 @@
       </article>
     `;
   }
+
+  // RENDER GRID PER CATEGORY
   function renderSections(){
     const productSections = document.getElementById('productSections');
     productSections.innerHTML = CATEGORY_ORDER.map(([id,label])=>{
@@ -722,11 +876,38 @@
       `;
     }).join('');
   }
+
   function toggleCat(id) {
     const grid = document.querySelector(`#cat-${id} .grid`);
     grid.classList.toggle('hidden');
   }
-  renderSections();
+
+  // MASTER TABLE RENDER
+  function renderTable() {
+    const table = document.getElementById('productTable');
+    if (!table) return;
+    const tbody = table.querySelector('tbody');
+    tbody.innerHTML = PRODUCTS.map(p => {
+      const msg = encodeURIComponent(`Hi Hasrin, saya berminat LG ${p.model} (${p.name}) — ${p.price}.`);
+      const catLabel = (ICONS[p.cat] || '✨') + ' ' + p.cat.replace('-', ' ').toUpperCase();
+      return `
+        <tr>
+          <td class="col-cat">${catLabel}</td>
+          <td class="col-model">${p.model}</td>
+          <td class="col-name">${p.name}</td>
+          <td class="col-price">${p.price}</td>
+          <td class="col-actions">
+            <div class="table-actions">
+              <a class="btn sm wa" target="_blank" rel="noopener" href="${WA_LINK}&text=${msg}">WA</a>
+              <button class="btn sm" type="button" onclick="showDetails(${p._idx})">Butiran</button>
+              <button class="btn sm outline-soft" type="button" onclick="prefillOrder('${p.model}')">Order</button>
+            </div>
+          </td>
+        </tr>
+      `;
+    }).join('');
+  }
+
   // Modal
   const modal = document.getElementById('modal');
   const mTitle = document.getElementById('m-title');
@@ -736,7 +917,9 @@
   const mSpecs = document.getElementById('m-specs');
   const mWa = document.getElementById('m-wa');
   let currentProduct = null;
+
   function toggleModal(show) { modal.classList.toggle('open', !!show); if (show) modal.focus(); }
+
   function showDetails(idx){
     const p = PRODUCTS[idx]; if(!p) return;
     currentProduct = p;
@@ -744,13 +927,20 @@
     mPrice.textContent = `${p.price}`;
     mTags.innerHTML = `<span class="chip">${p.cat.replace('-', ' ').toUpperCase()}</span>`;
     mDesc.textContent = p.desc;
-    mSpecs.innerHTML = (p.specs||[]).map(s=>`<li>${s}</li>`).join('') + (p.benefits||[]).map(b=>`<li><b>✓</b> ${b}</li>`).join('');
+    mSpecs.innerHTML = (p.specs||[]).map(s=>`<li>${s}</li>`).join('') +
+                       (p.benefits||[]).map(b=>`<li><b>✓</b> ${b}</li>`).join('');
     const msg = encodeURIComponent(`Hi Hasrin, saya nak detail untuk LG ${p.model} (${p.name}) — ${p.price}.`);
     mWa.href = `${WA_LINK}&text=${msg}`;
     toggleModal(true);
   }
-  function prefillOrder(model){ document.getElementById('order_model').value = model || ''; window.location.hash = '#order'; }
+
+  function prefillOrder(model){
+    document.getElementById('order_model').value = model || '';
+    window.location.hash = '#order';
+  }
+
   function prefillOrderFromModal(){ if(currentProduct) prefillOrder(currentProduct.model); }
+
   // Events
   document.getElementById('productSections').addEventListener('click', (e)=>{
     const btn = e.target.closest('button[data-action]');
@@ -759,22 +949,30 @@
     if(action==='detail'){ showDetails(Number(btn.dataset.idx)); }
     else if(action==='order'){ prefillOrder(btn.dataset.model); }
   });
+
   modal.addEventListener('click', e=>{ if(e.target===modal) toggleModal(false); });
+
   // Forms
   function submitOrder(e){
     e.preventDefault();
     const f = e.target;
-    const msg = encodeURIComponent(`ORDER LG Subscribe\nModel: ${f.model.value}\nNama: ${f.nama.value}\nPhone: ${f.phone.value}\nPhone2: ${f.phone2.value||'-'}\nAlamat: ${f.alamat.value}\nEmail: ${f.email.value}\nWarna: ${f.warna.value||'-'}\nMohon proses langganan.`);
+    const msg = encodeURIComponent(
+      `ORDER LG Subscribe\nModel: ${f.model.value}\nNama: ${f.nama.value}\nPhone: ${f.phone.value}\nPhone2: ${f.phone2.value||'-'}\nAlamat: ${f.alamat.value}\nEmail: ${f.email.value}\nWarna: ${f.warna.value||'-'}\nMohon proses langganan.`
+    );
     window.open(`${WA_LINK}&text=${msg}`, '_blank');
     f.reset();
   }
+
   function submitCrew(e){
     e.preventDefault();
     const f = e.target;
-    const msg = encodeURIComponent(`Hi Hasrin, nak sertai VYBE CREW.\nNama: ${f.nama.value}\nPhone: ${f.phone.value}\nPengalaman: ${f.pengalaman.value||'-'}\nSebab: ${f.sebab.value||'-'}`);
+    const msg = encodeURIComponent(
+      `Hi Hasrin, nak sertai VYBE CREW.\nNama: ${f.nama.value}\nPhone: ${f.phone.value}\nPengalaman: ${f.pengalaman.value||'-'}\nSebab: ${f.sebab.value||'-'}`
+    );
     window.open(`${WA_LINK}&text=${msg}`, '_blank');
     f.reset();
   }
+
   // Float Label
   const floatLabel = document.getElementById('floatLabel');
   window.addEventListener('scroll',()=>{
@@ -783,15 +981,18 @@
     else if(b < h - 250) floatLabel.textContent = '💬 Perlukan bantuan pilih model? Klik WhatsApp.';
     else floatLabel.textContent = '🚀 Sedia untuk langgan? Tekan WhatsApp sekarang.';
   });
+
   // AYRA
   const aiToggle = document.getElementById('aiToggle');
   const aiPanel = document.getElementById('aiPanel');
   const aiBody = document.getElementById('aiBody');
   const aiInput = document.getElementById('aiInput');
   const aiSend = document.getElementById('aiSend');
+
   aiToggle.addEventListener('click',()=>aiPanel.classList.toggle('open'));
   aiSend.addEventListener('click',handleAi);
   aiInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();handleAi();}});
+
   function addAiMsg(html,me=false){
     const div = document.createElement('div');
     div.className = 'ai-msg' + (me ? ' me' : '');
@@ -799,6 +1000,7 @@
     aiBody.appendChild(div);
     aiBody.scrollTop = aiBody.scrollHeight;
   }
+
   function handleAi(){
     const q = aiInput.value.trim(); if(!q) return;
     addAiMsg(q,true);
@@ -809,15 +1011,37 @@
       if(kw.includes(id.split('-')[0]) || kw.includes(label.toLowerCase().split(' ')[0])){ cat = id; break; }
     }
     let picks = PRODUCTS.filter(p=>!cat || p.cat===cat);
-    if(budget){ picks = picks.filter(p=>{ const m = p.price.match(/(\d{2,4})/); return m ? (+m[1] <= budget) : true; }); }
-    if(!picks.length){ addAiMsg('Cuba taip contoh: <b>"fridge RM120"</b>.'); aiInput.value=''; return; }
+    if(budget){
+      picks = picks.filter(p=>{
+        const m = p.price.match(/(\d{2,4})/);
+        return m ? (+m[1] <= budget) : true;
+      });
+    }
+    if(!picks.length){
+      addAiMsg('Cuba taip contoh: <b>"fridge RM120"</b>.');
+      aiInput.value='';
+      return;
+    }
     const reply = picks.slice(0,4).map(p=>{
       const msg = encodeURIComponent(`Hi Hasrin, berminat LG ${p.model} (${p.name}) — ${p.price}.`);
-      return `<div style="margin-top:6px;border-top:1px solid rgba(30,41,59,.9);padding-top:6px"><b>${p.model} — ${p.name}</b><br><small>${p.price}</small><div style="margin-top:6px;display:flex;gap:6px"><button class="btn sm" type="button" onclick="prefillOrder('${p.model}')">Order</button><button class="btn sm primary" type="button" onclick="showDetails(${p._idx})">Butiran</button><a class="btn sm wa" target="_blank" href="${WA_LINK}&text=${msg}">WhatsApp</a></div></div>`;
+      return `
+        <div style="margin-top:6px;border-top:1px solid rgba(30,41,59,.9);padding-top:6px">
+          <b>${p.model} — ${p.name}</b><br><small>${p.price}</small>
+          <div style="margin-top:6px;display:flex;gap:6px">
+            <button class="btn sm" type="button" onclick="prefillOrder('${p.model}')">Order</button>
+            <button class="btn sm primary" type="button" onclick="showDetails(${p._idx})">Butiran</button>
+            <a class="btn sm wa" target="_blank" href="${WA_LINK}&text=${msg}">WhatsApp</a>
+          </div>
+        </div>
+      `;
     }).join('');
     addAiMsg('Model sesuai: ' + reply);
     aiInput.value = '';
   }
+
+  // INIT
+  renderSections();
+  renderTable();
 </script>
 </body>
 </html>
