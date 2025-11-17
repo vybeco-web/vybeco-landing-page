@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LG Subscribe x VybeCo — OHSEM 50% Langganan Bulanan</title>
-  <meta name="description" content="LG Subscribe™ x VybeCo — langganan bulanan fleksibel, pemasangan & servis termasuk. Clean air, clean water, clean clothes, clean vibes. Street to Suite." />
+  <title>LG Subscribe x VybeCo — Langganan Fleksibel LG</title>
+  <meta name="description" content="LG Subscribe Malaysia by VybeCo Resources. Pilih Refrigerator, Water Purifier, Air Purifier, Washer, Dryer, TV, Aircond, Styler, Dishwasher, Vacuum dan Dehumidifier dengan langganan bulanan fleksibel, pemasangan & servis termasuk." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "LG Subscribe Products",
     "brand": "LG",
-    "description": "Langganan bulanan produk LG dengan servis & pemasangan termasuk."
+    "description": "Fleksibel langganan produk LG dengan servis termasuk."
   }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -52,34 +52,6 @@
     .btn.wa { background: linear-gradient(90deg, #25D366, #128C7E); border-color: transparent; color: #020617; }
     .btn.sm { font-size: 12px; padding: 6px 11px; }
     .btn.outline-soft { background: transparent; border-style: dashed; }
-    /* VYBE METER */
-    .meter-container {
-      position: fixed; top: 70px; left: 16px; z-index: 60;
-      display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800;
-      color: var(--silver); background: rgba(2,6,23,.9); padding: 6px 10px; border-radius: 999px;
-      border: 1px solid rgba(148,163,184,.3); backdrop-filter: blur(8px);
-    }
-    .meter-fill {
-      width: 60px; height: 6px; background: rgba(148,163,184,.3); border-radius: 999px; overflow: hidden;
-    }
-    .meter-fill::after {
-      content: ''; display: block; height: 100%; width: var(--vybe, 0%); background: linear-gradient(90deg, var(--blue), var(--pink)); transition: width .4s ease;
-    }
-    /* HUSTLE MODE */
-    #hustleToggle {
-      position: fixed; top: 70px; right: 16px; z-index: 60;
-      display: flex; align-items: center; gap: 8px; font-size: 13px;
-      background: rgba(2,6,23,.9); padding: 6px 10px; border-radius: 999px;
-      border: 1px solid rgba(148,163,184,.3); backdrop-filter: blur(8px);
-    }
-    #hustleToggle button.hustle-on { background: linear-gradient(90deg, var(--ok), #34d399); color: #020617; }
-    /* PROGRESS BAR */
-    .progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(15,23,42,.9); z-index: 70; }
-    .progress-bar { height: 100%; background: linear-gradient(90deg, var(--blue), var(--pink)); width: 0%; transition: width .3s ease; }
-    #progressText { position: fixed; top: 6px; left: 50%; transform: translateX(-50%); font-size: 11px; color: var(--silver); z-index: 70; }
-    /* FLOAT TOP */
-    #floatTop { position: fixed; right: 16px; top: 50%; transform: translateY(-50%); z-index: 60; display: none; }
-    #floatTop.show { display: block; }
     /* HERO */
     header { padding: 26px 0 4px; border-bottom: 1px solid rgba(15,23,42,.9); }
     h1 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 6px; color: var(--silver); letter-spacing: .04em; }
@@ -99,8 +71,6 @@
     .hero-tagline { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
     .hero-p { font-size: 14px; color: var(--muted); max-width: 440px; }
     .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
-    .ohsem { margin: 20px 0; padding: 12px; background: rgba(56,189,248,.15); border-radius: 12px; font-size: 13px; }
-    .ohsem-tag { background: var(--warn); color: #020617; padding: 4px 8px; border-radius: 999px; font-weight: 800; font-size: 11px; margin-right: 8px; }
     /* SECTION TITLES */
     .section-title {
       font-weight: 800; font-size: 20px; letter-spacing: .08em; text-transform: uppercase;
@@ -117,16 +87,13 @@
       position: relative; border-radius: 16px;
       background: #05070f; border: 1px solid rgba(30,41,59,.85); overflow: hidden;
     }
-    .badge { position: absolute; top: 8px; left: 8px; background: var(--warn); color: #020617; font-size: 10px; font-weight: 800; padding: 4px 6px; border-radius: 999px; z-index: 2; }
-    .chip { position: absolute; top: 8px; right: 8px; font-size: 10px; padding: 4px 6px; border-radius: 999px; z-index: 2; }
-    .chip.street-pick { background: rgba(34,197,94,.2); color: var(--ok); border: 1px solid var(--ok); }
-    .chip.crew-pick { background: rgba(251,191,36,.2); color: #d97706; border: 1px solid #fbbf24; }
     .poster {
       aspect-ratio: 4/5;
       background: radial-gradient(circle at 0 0, rgba(15,23,42,.8), transparent 60%);
       border-radius: 16px 16px 0 0; overflow: hidden;
       border-bottom: 1px solid rgba(30,41,59,.85);
     }
+    .poster picture { width: 100%; height: 100%; }
     .poster img { width: 100%; height: 100%; object-fit: cover; }
     .body { padding: 11px 13px 13px; }
     .model { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
@@ -161,8 +128,8 @@
     }
     input:focus, select:focus, textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 1px rgba(56,189,248,.35); }
     button {
-      background: linear-gradient(90deg, var(--blue), var(--pink));
-      color: #020617; padding: 11px 14px; border: none; border-radius: 999px;
+      background: linear-gradient(90deg, var(--blue), #4361ee);
+      color: #f8fafc; padding: 11px 14px; border: none; border-radius: 999px;
       font-weight: 800; font-size: 13px; cursor: pointer;
     }
     button:hover { filter: brightness(1.06); }
@@ -191,6 +158,11 @@
     .panel {
       background: #05070f; border-radius: 14px; border: 1px solid rgba(30,41,59,.9);
       padding: 11px 12px; font-size: 13px;
+    }
+    .chip {
+      display: inline-block; margin: 4px 6px 2px 0;
+      padding: 5px 9px; border-radius: 999px; font-size: 11px;
+      border: 1px solid rgba(56,189,248,.4); color: var(--blue); background: #020617;
     }
     .close {
       background: #020617; border-radius: 999px; border: 1px solid rgba(148,163,184,.5);
@@ -247,6 +219,19 @@
       font-size: 12px; padding: 8px 11px;
     }
     .ai-controls .btn { font-size: 12px; padding: 7px 12px; }
+    /* New Classes */
+    .text-muted { color: var(--muted); }
+    .font-bold { font-weight: 700; }
+    .line-height-15 { line-height: 1.5; }
+    .font-15 { font-size: 15px; }
+    .font-13 { font-size: 13px; margin-bottom: 4px; }
+    .outright-pricing {
+      background: #f8f9fa; padding: 12px; border-radius: 8px; font-size: 0.9rem;
+    }
+    .outright-pricing h6 { margin: 0 0 8px; font-weight: 600; }
+    .list-inline { display: flex; gap: 16px; flex-wrap: wrap; }
+    .list-inline li { margin: 0; }
+    .hidden { display: none; }
     /* Media Queries */
     @media (max-width: 920px) {
       .hero-grid { grid-template-columns: 1fr; }
@@ -256,229 +241,583 @@
     @media (max-width: 640px) {
       .brandbar { grid-template-columns: repeat(2, 1fr); }
       .nav-row { flex-direction: column; align-items: flex-start; }
-      .nav-links { flex-direction: column; width: 100%; }
-      .nav-links a { width: 100%; text-align: center; }
+      .nav-links { flex-direction: column; }
     }
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
-  <div class="nav">
-    <div class="wrap nav-row">
-      <div class="nav-title">VYBECO • LG SUBSCRIBE OHSEM UNIT</div>
-      <div class="nav-links">
-        <a href="#produk" class="btn">Produk</a>
-        <a href="#order" class="btn">Order</a>
-        <a href="#join" class="btn primary">Join VYBE CREW</a>
-      </div>
+<!-- NAV -->
+<div class="nav">
+  <div class="wrap nav-row">
+    <div class="nav-title">VYBECO • LG SUBSCRIBE</div>
+    <div class="nav-links">
+      <a href="#produk" class="btn">Produk</a>
+      <a href="#order" class="btn">Order</a>
+      <a href="#join" class="btn primary">Join VYBE CREW</a>
     </div>
   </div>
-
-  <!-- VYBE METER -->
-  <div class="meter-container">
-    <span>VYBE</span>
-    <div class="meter-fill"></div>
-    <span id="vybeScore">0</span>%
-  </div>
-
-  <!-- HUSTLE MODE -->
-  <div id="hustleToggle">
-    <button class="btn primary">HUSTLE MODE OFF</button>
-    <small id="hustleStatus">OFF</small>
-  </div>
-
-  <!-- PROGRESS BAR -->
-  <div class="progress-container">
-    <div class="progress-bar"></div>
-  </div>
-  <div id="progressText">Clean Street</div>
-
-  <!-- FLOAT TOP -->
-  <div id="floatTop">
-    <button class="btn primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">Ke Atas</button>
-  </div>
-
-  <!-- HERO -->
-  <header>
-    <div class="wrap">
-      <h1>Clean Street. Smart Home.</h1>
-      <p class="sub">
-        LG Subscribe™ x VybeCo — langganan bulanan, pemasangan & servis termasuk. Clean air, clean water, clean clothes, clean vibes. We hustle from the street to your suite.
-      </p>
-
-      <div class="brandbar">
-        <div class="brand"><img src="assets/img/logos/lg-logo.png" alt="LG"></div>
-        <div class="brand"><img src="assets/img/logos/lg-subscribe-logo.png" alt="LG Subscribe"></div>
-        <div class="brand"><img src="assets/img/logos/vybeco-logo.png" alt="VybeCo Resources"></div>
-        <div class="brand"><img src="assets/img/logos/vybe-crew-logo.png" alt="VYBE CREW"></div>
-      </div>
-
-      <div class="hero-grid">
-        <img class="hero-photo" src="assets/img/hasrin.jpg" alt="Hasrin Jais — LG Subscribe Manager & Founder VYBE CREW">
-        <div>
-          <div class="hero-tagline">“We don’t wait. We Hustle with VYBES.”</div>
-          <p class="hero-p">
-            Hai, saya <b>Hasrin Jais</b>. Pilih produk ikut bajet, klik WhatsApp — saya bantu semak kelayakan <b>OHSEM 50%</b>, urus permohonan & atur pemasangan sampai siap.
-          </p>
-          <div class="hero-cta">
-            <a class="btn primary" href="#produk">Lihat Produk</a>
-            <a class="btn" href="#order">Order Sekarang</a>
-            <a class="btn" href="#join">Sertai VYBE CREW</a>
-          </div>
+</div>
+<!-- HERO -->
+<header>
+  <div class="wrap">
+    <h1>Langgan LG Subscribe™ Bersama VybeCo</h1>
+    <p class="sub">
+      Lengkapkan rumah dengan LG Subscribe™ — langganan bulanan fleksibel, tanpa komitmen milik penuh.
+      Pemasangan, servis & lawatan berkala termasuk. We Hustle With VYBES.
+    </p>
+    <div class="brandbar">
+      <div class="brand"><img src="assets/img/logos/lg-logo.png" alt="LG"></div>
+      <div class="brand"><img src="assets/img/logos/lg-subscribe-logo.png" alt="LG Subscribe"></div>
+      <div class="brand"><img src="assets/img/logos/vybeco-logo.png" alt="VybeCo Resources"></div>
+      <div class="brand"><img src="assets/img/logos/vybe-crew-logo.png" alt="VYBE CREW"></div>
+    </div>
+    <div class="hero-grid">
+      <img class="hero-photo" src="assets/img/hasrin.jpg" alt="Hasrin Jais — LG Subscribe Manager & Founder VYBE CREW">
+      <div>
+        <div class="hero-tagline">"We don't wait. We Hustle with VYBES."</div>
+        <p class="hero-p">
+          Hai, saya <b>Hasrin Jais</b>. Pilih produk ikut bajet, klik WhatsApp — saya bantu semak kelayakan,
+          urus permohonan & atur pemasangan sampai siap.
+        </p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#produk">Lihat Produk</a>
+          <a class="btn" href="#order">Order Sekarang</a>
+          <a class="btn" href="#join">Sertai VYBE CREW</a>
         </div>
       </div>
-
-      <div class="ohsem">
-        <span class="ohsem-tag">OHSEM 50%</span>
-        <span>
-          <b>Diskaun 50% yuran langganan</b> untuk <b>9 bulan pertama</b> bagi produk terpilih. Pemasangan, servis & lawatan berkala termasuk dalam langganan (5 tahun / 7 tahun kontrak, ikut model).
-        </span>
-      </div>
-    </div>
-  </header>
-
-  <!-- CLEAN STREET COLLECTION -->
-  <main class="wrap" id="produk">
-    <div class="section-title">CLEAN STREET COLLECTION</div>
-    <p class="section-sub">Pilih kategori — dari aircond sejuk macam KLCC sampai penapis air bersih macam air terjun.</p>
-    <div id="productSections"></div>
-  </main>
-
-  <!-- BAGAIMANA PROSES TEMPAHAN? -->
-  <section class="wrap" id="info">
-    <div class="section-title">BAGAIMANA PROSES TEMPAHAN?</div>
-    <div class="infocards">
-      <div class="infocard">
-        <h4>Proses Permohonan</h4>
-        <p>
-          1. Daftar dalam sistem<br>
-          2. Jika nama lulus, HQ akan hubungi untuk pengesahan<br>
-          3. Technician hubungi untuk tetapkan tarikh & lokasi pemasangan<br>
-          4. Barang siap pasang bulan ini, <b>bayar bulan depan</b>
-        </p>
-      </div>
-      <div class="infocard">
-        <h4>Anggaran Masa</h4>
-        <p>
-          <b>Proses Lulus:</b> 1–3 hari bekerja<br>
-          <b>Penghantaran & Pemasangan:</b><br>
-          • 7–10 hari (Semenanjung)<br>
-          • 7–30 hari (Sabah & Sarawak)
-        </p>
-      </div>
-      <div class="infocard">
-        <h4>Terma & Syarat Ringkas</h4>
-        <p>
-          Valid Warganegara Malaysia (18–70 tahun)<br>
-          Tiada blacklist (CTOS / CCRIS)<br>
-          Kad debit/kredit aktif (autodebit)<br>
-          Nama kad mesti sama seperti pemohon<br>
-          Validasi RM10 dipulangkan selepas pengesahan
-        </p>
-      </div>
-      <div class="infocard">
-        <h4>Dokumen Diperlukan</h4>
-        <p>
-          IC depan & belakang<br>
-          Penyata bank 3 bulan<br>
-          Kad debit/kredit (gambar depan)<br>
-          Bukti bayaran RM10 validasi
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ORDER FORM -->
-  <section class="wrap cta-section" id="order">
-    <h3>ORDER SEKARANG — BAYAR BULAN DEPAN</h3>
-    <p>Isi borang, saya semak kelayakan & urus sampai siap.</p>
-    <form class="form" onsubmit="submitOrder(event)">
-      <input type="text" id="order_model" name="model" placeholder="Model (cth: GC-L257KQKR)" required />
-      <input type="text" name="nama" placeholder="Nama Penuh (seperti IC)" required />
-      <input type="tel" name="phone" placeholder="No. Telefon Utama" required />
-      <input type="tel" name="phone2" placeholder="No. Telefon Lain (jika ada)" />
-      <textarea name="alamat" rows="2" placeholder="Alamat Penuh (termasuk poskod)" required></textarea>
-      <input type="email" name="email" placeholder="Emel (untuk notis)" />
-      <input type="text" name="warna" placeholder="Warna Pilihan (jika ada)" />
-      <button type="submit">Hantar Permohonan</button>
-    </form>
-  </section>
-
-  <!-- JOIN VYBE CREW -->
-  <section class="wrap cta-section" id="join">
-    <h3>SERTAI VYBE CREW — JUAL LG SUBSCRIBE</h3>
-    <p>Dapat komisen, training & support penuh. Street to Suite.</p>
-    <form class="form" onsubmit="submitCrew(event)">
-      <input type="text" name="nama" placeholder="Nama Penuh" required />
-      <input type="tel" name="phone" placeholder="No. Telefon" required />
-      <textarea name="pengalaman" placeholder="Pengalaman jualan (jika ada)"></textarea>
-      <textarea name="sebab" placeholder="Kenapa nak join VYBE CREW?"></textarea>
-      <button type="submit">Hantar Permohonan</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <p>&copy; 2025 VybeCo Resources • LG Subscribe™ Malaysia. All rights reserved.</p>
-      <p><small>Powered by Street Hustle. Clean Street. Smart Home.</small></p>
-    </div>
-  </footer>
-
-  <!-- FLOATING CTA -->
-  <div class="float">
-    <div class="float-label" id="floatLabel">Semak promosi OHSEM 50% untuk model yang anda minat.</div>
-    <a class="btn wa" target="_blank" rel="noopener" href="https://wa.link/fsc0hq">WhatsApp</a>
-  </div>
-
-  <!-- AYRA AI -->
-  <div class="ai-launch">
-    <button type="button" id="aiToggle">AYRA • Street Concierge</button>
-  </div>
-  <div class="ai-panel" id="aiPanel">
-    <div class="ai-head"><strong>AYRA</strong> <span style="color:var(--muted)">• Street to Suite. Pilih LG Subscribe.</span></div>
-    <div class="ai-body" id="aiBody">
-      <div class="ai-msg">Hai! Taip bajet & kategori (cth: <b>“fridge RM120”</b>, <b>“TV besar RM300”</b>).</div>
-    </div>
-    <div class="ai-controls">
-      <input id="aiInput" placeholder="Contoh: washer keluarga RM100" />
-      <button type="button" class="btn primary sm" id="aiSend">Hantar</button>
     </div>
   </div>
-
-  <!-- MODAL -->
-  <div class="modal" id="modal">
-    <div class="sheet">
-      <header>
-        <h3 id="m-title"></h3>
-        <button class="close" type="button" onclick="toggleModal(false)">Tutup</button>
-      </header>
-      <div class="content">
-        <div>
-          <div class="panel">
-            <div id="m-tags"></div>
-            <div id="m-price"></div>
-          </div>
-          <div class="panel">
-            <h4>Ringkasan (BM)</h4>
-            <p id="m-desc"></p>
-          </div>
+</header>
+<!-- PRODUK -->
+<main class="wrap" id="produk">
+  <div class="section-title">Produk LG Subscribe</div>
+  <p class="section-sub">Pilih kategori, tengok harga bulanan standard. Klik <b>Butiran</b> untuk lihat spesifikasi & kelebihan penuh (Bahasa Melayu & English ringkas).</p>
+  <div id="productSections"></div>
+</main>
+<!-- INFO ORDER -->
+<section class="wrap" id="info">
+  <div class="section-title">Bagaimana Proses Tempahan?</div>
+  <div class="infocards">
+    <div class="infocard">
+      <h4>📌 Proses Permohonan</h4>
+      <p>
+        1️⃣ Daftar dalam sistem<br>
+        2️⃣ Jika nama lulus, HQ akan hubungi untuk pengesahan<br>
+        3️⃣ Technician hubungi untuk tetapkan tarikh & lokasi pemasangan<br>
+        4️⃣ Barang siap pasang bulan ini, <b>bayar bulan depan</b> 😇
+      </p>
+    </div>
+    <div class="infocard">
+      <h4>🕓 Anggaran Masa</h4>
+      <p>
+        <b>Proses Lulus:</b> 1–3 hari bekerja<br>
+        <b>Penghantaran & Pemasangan:</b><br>
+        • 7–10 hari (Semenanjung)<br>
+        • 7–30 hari (Sabah & Sarawak)
+      </p>
+    </div>
+    <div class="infocard">
+      <h4>📜 Terma & Syarat Ringkas</h4>
+      <p>
+        ✅ Warganegara Malaysia (18–70 tahun)<br>
+        ✅ Tiada blacklist (CTOS / CCRIS)<br>
+        ✅ Kad debit/kredit aktif (autodebit)<br>
+        ❌ Tidak diterima: TnG, BigPay, AEON, MAE & lain<br>
+        ✅ Nama kad mesti sama seperti pemohon<br>
+        ✅ Validasi RM10 dipulangkan selepas pengesahan<br>
+        ✅ Caj RM100 / item untuk rumah tanpa lif<br>
+        ✅ Proses semakan: 2–5 hari bekerja
+      </p>
+    </div>
+    <div class="infocard">
+      <h4>📂 Dokumen Diperlukan</h4>
+      <p>
+        📎 IC depan & belakang<br>
+        📎 Penyata bank 3 bulan<br>
+        📎 Kad debit/kredit (gambar depan)<br>
+        📎 Bukti bayaran RM10 validasi
+      </p>
+    </div>
+  </div>
+</section>
+<!-- ORDER -->
+<section class="wrap cta-section" id="order">
+  <h3>Order LG Subscribe Sekarang</h3>
+  <p>Isi maklumat ringkas di bawah, kami akan hubungi semula untuk semakan & pengesahan.</p>
+  <form class="form" onsubmit="submitOrder(event)">
+    <input type="text" id="order_model" name="model" placeholder="Model (cth: GC-L257KQKR)" required aria-label="Model produk" />
+    <input type="text" name="nama" placeholder="Nama penuh (seperti dalam IC)" required aria-label="Nama penuh" />
+    <input type="tel" name="phone" placeholder="Nombor telefon utama" required aria-label="Nombor telefon utama" />
+    <input type="tel" name="phone2" placeholder="Nombor telefon lain (backup)" aria-label="Nombor telefon lain" />
+    <textarea name="alamat" rows="2" placeholder="Alamat pemasangan (berserta poskod)" required aria-label="Alamat pemasangan"></textarea>
+    <input type="email" name="email" placeholder="E-mel" required aria-label="E-mel" />
+    <input type="text" name="warna" placeholder="Warna pilihan — jika berkenaan" aria-label="Warna pilihan" />
+    <button type="submit">Hantar Order & Buka WhatsApp</button>
+  </form>
+</section>
+<!-- JOIN CREW -->
+<section class="wrap cta-section" id="join">
+  <h3>Sertai VYBE CREW (LG Subscribe Unit)</h3>
+  <p>Bina side-income dengan bimbingan — training, skrip, dan sistem sudah tersedia. Kita hustle sama-sama.</p>
+  <form class="form" onsubmit="submitCrew(event)">
+    <input type="text" name="nama" placeholder="Nama penuh" required aria-label="Nama penuh" />
+    <input type="tel" name="phone" placeholder="No. telefon (WhatsApp)" required aria-label="No. telefon" />
+    <select name="pengalaman" aria-label="Pengalaman jualan">
+      <option value="">Pengalaman jualan?</option>
+      <option>Tiada pengalaman</option>
+      <option>Ada pengalaman jualan</option>
+      <option>Full-time digital / affiliate</option>
+    </select>
+    <textarea name="sebab" rows="3" placeholder="Kenapa nak sertai VYBE CREW?" aria-label="Sebab sertai"></textarea>
+    <button type="submit">Hantar & Buka WhatsApp</button>
+  </form>
+</section>
+<footer>
+  <div class="wrap">
+    <small>
+      © 2025 VybeCo Resources • LG Subscribe™ Malaysia. Harga langganan adalah anggaran dan tertakluk pada kemaskini rasmi LG.
+    </small>
+  </div>
+</footer>
+<!-- FLOATING CTA -->
+<div class="float">
+  <div class="float-label" id="floatLabel">🔍 Semak model LG Subscribe yang anda minat.</div>
+  <a class="btn wa" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=60194124033&text=Hi%20Hasrin,%20saya%20nak%20semak%20LG%20Subscribe.">WhatsApp</a>
+</div>
+<!-- AYRA -->
+<div class="ai-launch">
+  <button type="button" id="aiToggle">AYRA LG • Cari Produk</button>
+</div>
+<div class="ai-panel" id="aiPanel">
+  <div class="ai-head"><strong>AYRA LG</strong> <span class="text-muted">• Concierge Produk</span></div>
+  <div class="ai-body" id="aiBody">
+    <div class="ai-msg">
+      Hai 👋 Saya AYRA. Taip bajet & kategori (cth: <b>"fridge RM120"</b>, <b>"TV besar RM300"</b>).
+      Saya cadangkan beberapa model yang sesuai, dan anda boleh terus klik Order.
+    </div>
+  </div>
+  <div class="ai-controls">
+    <input id="aiInput" placeholder="Contoh: washer keluarga RM100" aria-label="Input pencarian produk" />
+    <button type="button" class="btn primary sm" id="aiSend">Hantar</button>
+  </div>
+</div>
+<!-- MODAL DETAIL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="sheet">
+    <header>
+      <h3 id="m-title" class="font-15 font-bold"></h3>
+      <button class="close" type="button" onclick="toggleModal(false)">Tutup</button>
+    </header>
+    <div class="content">
+      <div>
+        <div class="panel">
+          <div id="m-tags"></div>
+          <div id="m-price"></div>
         </div>
         <div class="panel">
-          <h4>Specs & Benefits</h4>
-          <ul id="m-specs"></ul>
+          <h4 class="font-13">Ringkasan (BM)</h4>
+          <p id="m-desc" class="font-13 text-muted line-height-15"></p>
         </div>
       </div>
-      <div class="modal-footer">
-        <a id="m-wa" class="btn wa sm" target="_blank" rel="noopener">WhatsApp Hasrin</a>
-        <button class="btn sm outline-soft" onclick="prefillOrderFromModal()">Isi Borang Order</button>
+      <div class="panel">
+        <h4 class="font-13">Specs & Benefits</h4>
+        <ul id="m-specs"></ul>
       </div>
     </div>
+    <div class="modal-footer">
+      <a id="m-wa" class="btn wa sm" target="_blank" rel="noopener">WhatsApp Hasrin</a>
+      <a class="btn sm outline-soft" href="#order" onclick="prefillOrderFromModal()">Isi Borang Order</a>
+    </div>
   </div>
-
-  <!-- JS: PRODUCTS + LOGIC -->
-  <script src="js/products-data.js"></script>
-  <script src="js/script.js"></script>
+</div>
+<script>
+  const WA_LINK = 'https://api.whatsapp.com/send?phone=60194124033';
+  const CATEGORY_ORDER = [
+    ['refrigerator', 'Refrigerator'],
+    ['water-purifier', 'Water Purifier'],
+    ['air-purifier', 'Air Purifier'],
+    ['washer', 'Washer'],
+    ['dryer', 'Dryer'],
+    ['washtower', 'WashTower'],
+    ['aircon', 'Air Conditioner'],
+    ['tv', 'TV'],
+    ['soundbar', 'Soundbar'],
+    ['styler', 'Styler'],
+    ['dishwasher', 'Dishwasher'],
+    ['vacuum', 'Vacuum'],
+    ['dehumidifier', 'Dehumidifier'],
+  ];
+  const ICONS = {
+    'refrigerator': '🧊', 'water-purifier': '💧', 'air-purifier': '🌬️', 'washer': '🧺', 'dryer': '🌤️',
+    'washtower': '🧺', 'aircon': '❄️', 'tv': '📺', 'soundbar': '🔊', 'styler': '👔',
+    'dishwasher': '🍽️', 'vacuum': '🧹', 'dehumidifier': '💨'
+  };
+  const PRODUCTS = [
+    // Refrigerator
+    {cat:'refrigerator',model:'GC-L257KQKR',name:'641L Side-by-Side',poster:'assets/img/refrigerator/GC-L257KQKR.jpg',
+     price:'RM220 / bulan', desc:'Peti sejuk side-by-side besar dengan dispenser ais & air – sesuai keluarga besar.',
+     specs:['Smart Inverter Compressor – jimat tenaga & senyap.', 'LinearCooling+ – suhu sekata, makanan tahan lama.', 'UVnano Dispenser – air bersih.'],
+     benefits:['Penjimatan bil elektrik 32%.', 'Hygiene tinggi, kurang bau.']},
+    {cat:'refrigerator',model:'GC-J257SQNW',name:'635L Side-by-Side UVnano',poster:'assets/img/refrigerator/GC-J257SQNW.jpg',
+     price:'RM260 / bulan', desc:'Side-by-side dengan fokus kebersihan UVnano & Hygiene Fresh+.',
+     specs:['UVnano pada nozzle – kurang bakteria.', 'Door-in-Door – akses pantas.'],
+     benefits:['Bau segar, sesuai keluarga alergi.']},
+    {cat:'refrigerator',model:'GN-F452PQAK',name:'491L Top Freezer',poster:'assets/img/refrigerator/GN-F452PQAK.jpg',
+     price:'RM160 / bulan', desc:'Top-freezer kompak dengan dispenser air.',
+     specs:['DoorCooling+ – sejuk sekata.', 'Kapasiti 491L.'],
+     benefits:['Jimat ruang untuk apartment.']},
+    {cat:'refrigerator',model:'GC-B24FFCPB',name:'665L Multi-Door',poster:'assets/img/refrigerator/GC-B24FFCPB.jpg',
+     price:'RM130 / bulan', desc:'Multi-door besar untuk organisasi makanan.',
+     specs:['InstaView Door-in-Door.', 'Express Freeze.'],
+     benefits:['Lihat stok tanpa buka pintu.']},
+    {cat:'refrigerator',model:'GV-K25FFGER',name:'612L White Glass',poster:'assets/img/refrigerator/GV-K25FFGER.jpg',
+     price:'RM180 / bulan', desc:'Reka bentuk kaca moden dengan kapasiti besar.',
+     specs:['MDFin Glass – tahan capak.', 'Smart Diagnosis.'],
+     benefits:['Estetik dapur premium.']},
+    {cat:'refrigerator',model:'GC-G22FFQAB',name:'508L Multi-Door',poster:'assets/img/refrigerator/GC-G22FFQAB.jpg',
+     price:'RM160 / bulan', desc:'Multi-door dengan dispenser.',
+     specs:['ThinQ AI – kawal remote.', 'Multi Air Flow.'],
+     benefits:['Mudah kawal via app.']},
+    // Water Purifier
+    {cat:'water-purifier',model:'WU525BS',name:'Atom-U Hot/Cold',poster:'assets/img/water-purifier/WU525BS.jpg',
+     price:'RM110 / bulan', desc:'Penapis tanpa tangki dengan suhu on-demand.',
+     specs:['4-lapis penapisan RO.', 'ThinQ app control.'],
+     benefits:['Air bersih 99.99%, jimat botol.']},
+    {cat:'water-purifier',model:'WD518AN',name:'Atom-V Compact',poster:'assets/img/water-purifier/WD518AN.jpg',
+     price:'RM70 / bulan', desc:'Kompak untuk dapur kecil.',
+     specs:['4 warna pilihan.', 'Auto steril.'],
+     benefits:['Mudah pasang, servis mudah.']},
+    {cat:'water-purifier',model:'WS410GN',name:'S2 Slim Stand Hot/Cold',poster:'assets/img/water-purifier/WS410GN.jpg',
+     price:'RM110 / bulan', desc:'Slim stand dengan hot/cold.',
+     specs:['Mineral boost.', 'UV steril.'],
+     benefits:['Air mineral alami.']},
+    {cat:'water-purifier',model:'WS510SN',name:'S1 Slim Hot/Ambient/Cold',poster:'assets/img/water-purifier/WS510SN.jpg',
+     price:'RM130 / bulan', desc:'3 suhu dengan stand slim.',
+     specs:['RO + UV.', 'Smart display.'],
+     benefits:['Sesuai keluarga sibuk.']},
+    {cat:'water-purifier',model:'WD210MN',name:'MX Hot/Ambient',poster:'assets/img/water-purifier/WD210MN.jpg',
+     price:'RM60 / bulan', desc:'MX series untuk kebersihan tinggi.',
+     specs:['Multi-stage filter.', 'Auto clean.'],
+     benefits:['Kurang maintenance.']},
+    // Air Purifier
+    {cat:'air-purifier',model:'AS10GDBYO',name:'Alpha Pet Dual Booster',poster:'assets/img/air-purifier/AS10GDBYO.jpg',
+     price:'RM105 / bulan', desc:'360° untuk ruang besar dengan pet filter.',
+     specs:['HEPA H13 + deodor.', 'PM1.0 sensor.'],
+     benefits:['Kurang alergi, bau haiwan.']},
+    {cat:'air-purifier',model:'AS60GHWGO',name:'360° Standard',poster:'assets/img/air-purifier/AS60GHWGO.jpg',
+     price:'RM140 / bulan', desc:'Model pertengahan untuk bilik.',
+     specs:['True HEPA.', 'Sleep mode.'],
+     benefits:['Udara bersih 99.97%.']},
+    {cat:'air-purifier',model:'AS20GPBK0',name:'AeroFurniture',poster:'assets/img/air-purifier/AS20GPBK0.jpg',
+     price:'RM160 / bulan', desc:'Meja + purifier hybrid.',
+     specs:['HEPA + pre-filter.', 'Compact design.'],
+     benefits:['Jimat ruang estetik.']},
+    {cat:'air-purifier',model:'AS65GDBYO',name:'Alpha Pet Single Booster',poster:'assets/img/air-purifier/AS65GDBYO.jpg',
+     price:'RM75 / bulan', desc:'Single booster untuk pet owner.',
+     specs:['Pet mode.', 'Auto clean.'],
+     benefits:['Kurang bulu haiwan.']},
+    {cat:'air-purifier',model:'AS10GDWBO',name:'360° Dual Booster',poster:'assets/img/air-purifier/AS10GDWBO.jpg',
+     price:'RM100 / bulan', desc:'Dual booster untuk edaran cepat.',
+     specs:['360° intake.', 'Plasmaster Ionizer.'],
+     benefits:['Udara bersih cepat.']},
+    {cat:'air-purifier',model:'AS55GG',name:'Aero Booster',poster:'assets/img/air-purifier/AS55GG.jpg',
+     price:'RM65 / bulan', desc:'Aero untuk ruang sederhana.',
+     specs:['HEPA + carbon.', 'Quiet operation.'],
+     benefits:['Senyap untuk tidur.']},
+    {cat:'air-purifier',model:'AS35GGW10.AML',name:'Aero HIT',poster:'assets/img/air-purifier/AS35GGW10.AML.jpg',
+     price:'RM45 / bulan', desc:'HIT untuk habuk halus.',
+     specs:['Nano carbon.', 'Light sensor.'],
+     benefits:['Jimat tenaga auto.']},
+    {cat:'air-purifier',model:'AS65GDWBO',name:'Single Booster',poster:'assets/img/air-purifier/AS65GDWBO.jpg',
+     price:'RM70 / bulan', desc:'Single untuk bilik kecil.',
+     specs:['PM2.5 sensor.', 'Filter indicator.'],
+     benefits:['Mudah guna harian.']},
+    {cat:'air-purifier',model:'AS20GP',name:'Aero Furniture',poster:'assets/img/air-purifier/AS20GP.jpg',
+     price:'RM60 / bulan', desc:'Furniture style multi-warna.',
+     specs:['3 warna.', 'HEPA filter.'],
+     benefits:['Dekorasi + fungsi.']},
+    {cat:'air-purifier',model:'AS60GH',name:'360° HIT',poster:'assets/img/air-purifier/AS60GH.jpg',
+     price:'RM50 / bulan', desc:'HIT untuk hygiene.',
+     specs:['UVnano.', 'Auto mode.'],
+     benefits:['Kurang virus.']},
+    // Washer
+    {cat:'washer',model:'FV1450S2W',name:'Front Load 10.5kg',poster:'assets/img/washer/FV1450S2W.jpg',
+     price:'RM200 / bulan', desc:'Front load dengan AI DD.',
+     specs:['AI DD – pilih corak auto.', 'TurboWash 360.'],
+     benefits:['Kain tahan lama, cepat basuh.']},
+    {cat:'washer',model:'F2520SNEKR',name:'Front Load 20kg',poster:'assets/img/washer/F2520SNEKR.jpg',
+     price:'RM300 / bulan', desc:'Kapasiti besar untuk comforter.',
+     specs:['Inverter motor.', 'Hygiene Steam.'],
+     benefits:['Kurang trip dobi.']},
+    {cat:'washer',model:'TV2517DV3B',name:'Top Load 17kg',poster:'assets/img/washer/TV2517DV3B.jpg',
+     price:'RM85 / bulan', desc:'Top load mudah guna.',
+     specs:['TurboDrum.', 'Smart Diagnosis.'],
+     benefits:['Sesuai rumah landed.']},
+    {cat:'washer',model:'TV2520SV9KR',name:'Top Load 20kg',poster:'assets/img/washer/TV2520SV9KR.jpg',
+     price:'RM100 / bulan', desc:'Besar untuk keluarga ramai.',
+     specs:['6 Motion.', 'Auto pre-wash.'],
+     benefits:['Basuh kuat, jimat air.']},
+    {cat:'washer',model:'F2520SNEKR',name:'Front Load 20kg',poster:'assets/img/washer/F2520SNEKR.jpg',
+     price:'RM120 / bulan', desc:'Front load besar.',
+     specs:['AI Wash.', 'Steam+.'],
+     benefits:['Kurang alergen.']},
+    {cat:'washer',model:'F2515RNTKAR',name:'15/8kg Washer Dryer',poster:'assets/img/washer/F2515RNTKAR.jpg',
+     price:'RM140 / bulan', desc:'Gabung washer + dryer.',
+     specs:['Heat Pump.', 'Sensor Dry.'],
+     benefits:['Kering cepat, jimat ruang.']},
+    {cat:'washer',model:'FV1209D4W',name:'9/5kg Washer Dryer AI DD',poster:'assets/img/washer/FV1209D4W.jpg',
+     price:'RM120 / bulan', desc:'AI DD dengan steam.',
+     specs:['Direct Drive.', 'Steam Refresh.'],
+     benefits:['Baju segar tanpa basuh.']},
+    {cat:'washer',model:'FV1450S2W',name:'10.5kg Front Load',poster:'assets/img/washer/FV1450S2W.jpg',
+     price:'RM90 / bulan', desc:'Standard front load.',
+     specs:['Inverter.', 'Allergy Care.'],
+     benefits:['Lembut kain.']},
+    // Dryer
+    {cat:'dryer',model:'VD-H9066WSR',name:'Heat Pump 9kg',poster:'assets/img/dryer/VD-H9066WSR.jpg',
+     price:'RM220 / bulan', desc:'Heat pump lembut kain.',
+     specs:['Sensor Dry.', 'Allergy Care.'],
+     benefits:['Jimat 70% tenaga.']},
+    {cat:'dryer',model:'VD-H9066WS',name:'9kg Heat Pump',poster:'assets/img/dryer/VD-H9066WS.jpg',
+     price:'RM100 / bulan', desc:'Standard heat pump.',
+     specs:['Auto Cleaning Condenser.', 'Wrinkle Care.'],
+     benefits:['Tak bergantung cuaca.']},
+    // WashTower
+    {cat:'washtower',model:'WT2520MHGER',name:'WashTower AI DD',poster:'assets/img/washtower/WT2520MHGER.jpg',
+     price:'RM560 / bulan', desc:'Washer + dryer menara.',
+     specs:['Center Control.', 'AI DD.'],
+     benefits:['Jimat ruang condo.']},
+    // Aircon (folder renamed to aircond)
+    {cat:'aircon',model:'S3-Q09JAPPA',name:'Dual Inverter 1.0HP',poster:'assets/img/aircond/S3-Q09JAPPA.jpg',
+     price:'RM80 / bulan', desc:'Standard inverter bilik tidur.',
+     specs:['Fast Cooling.', 'Allergy Filter.'],
+     benefits:['Jimat 70% tenaga.']},
+    {cat:'aircon',model:'S3-Q12JA3BA',name:'Dual Inverter 1.5HP',poster:'assets/img/aircond/S3-Q12JA3BA.jpg',
+     price:'RM90 / bulan', desc:'Untuk bilik sederhana.',
+     specs:['ThinQ Wi-Fi.', 'Dehumidify.'],
+     benefits:['Kawal remote app.']},
+    {cat:'aircon',model:'S3-Q24K2RPA',name:'ArtCool 2.5HP',poster:'assets/img/aircond/S3-Q24K2RPA.jpg',
+     price:'RM280 / bulan', desc:'Design premium ruang tamu.',
+     specs:['Glass Panel.', 'Jet Mode.'],
+     benefits:['Estetik moden.']},
+    {cat:'aircon',model:'S3-Q12JARPA',name:'ArtCool 1.5HP',poster:'assets/img/aircond/S3-Q12JARPA.jpg',
+     price:'RM130 / bulan', desc:'ArtCool series.',
+     specs:['Mood Light.', 'Voice Control.'],
+     benefits:['Integrasi Google Home.']},
+    // TV
+    {cat:'tv',model:'OLED77B5PSA',name:'77" OLED B5 4K',poster:'assets/img/tv/OLED77B5PSA.jpg',
+     price:'RM1120 / bulan', desc:'OLED untuk home cinema.',
+     specs:['Dolby Vision.', 'webOS Smart.'],
+     benefits:['Hitam pekat, kontras tinggi.']},
+    {cat:'tv',model:'OLED65C3PSA',name:'65" OLED C3 4K',poster:'assets/img/tv/OLED65C3PSA.jpg',
+     price:'RM780 / bulan', desc:'Gaming & movie.',
+     specs:['120Hz Refresh.', 'NVIDIA G-Sync.'],
+     benefits:['Smooth gaming.']},
+    {cat:'tv',model:'QNED75',name:'75" QNED 4K',poster:'assets/img/tv/QNED75.jpg',
+     price:'RM400 / bulan', desc:'QNED untuk sukan.',
+     specs:['Quantum Dot.', 'Local Dimming.'],
+     benefits:['Warna cerah ruang terang.']},
+    {cat:'tv',model:'Nano83',name:'65" NanoCell 4K',poster:'assets/img/tv/Nano83.jpg',
+     price:'RM220 / bulan', desc:'Mid-range NanoCell.',
+     specs:['AI Processor.', 'Magic Remote.'],
+     benefits:['Mudah navigasi.']},
+    {cat:'tv',model:'75QNED91TSA',name:'75" MiniLED QNED',poster:'assets/img/tv/75QNED91TSA.jpg',
+     price:'RM230 / bulan', desc:'MiniLED untuk kontras.',
+     specs:['Dimming Pro.', 'Dolby Atmos.'],
+     benefits:['HDR superior.']},
+    {cat:'tv',model:'65QNED87ASA',name:'65" QNED Evo AI',poster:'assets/img/tv/65QNED87ASA.jpg',
+     price:'RM135 / bulan', desc:'Evo AI 2025.',
+     specs:['Dynamic Tone Mapping.', 'AI Picture.'],
+     benefits:['Upscale auto.']},
+    // Soundbar
+    {cat:'soundbar',model:'S90QY',name:'Dolby Atmos 5.1.3',poster:'assets/img/soundbar/S90QY.jpg',
+     price:'RM320 / bulan', desc:'Premium audio.',
+     specs:['WOW Synergy.', 'AI Sound Pro.'],
+     benefits:['Immersive sound.']},
+    {cat:'soundbar',model:'S90TY',name:'570W 5.1.3ch',poster:'assets/img/soundbar/S90TY.jpg',
+     price:'RM60 / bulan', desc:'High res audio.',
+     specs:['Dolby Atmos.', 'Rear Speakers.'],
+     benefits:['Cinema at home.']},
+    // Styler
+    {cat:'styler',model:'S3WF',name:'TrueSteam Styler',poster:'assets/img/styler/S3WF.jpg',
+     price:'RM180 / bulan', desc:'Almari stim pakaian.',
+     specs:['Moving Hanger.', 'Steam Sanitize.'],
+     benefits:['Kurang dry clean.']},
+    // Dishwasher
+    {cat:'dishwasher',model:'DFC533FV',name:'QuadWash TrueSteam Prime Silver',poster:'assets/img/dishwasher/DFC533FV.jpg',
+     price:'RM130 / bulan', desc:'Wi-Fi enabled, launching 25 Sep 2025 (Klang Valley).',
+     specs:['QuadWash 4 arms.', 'TrueSteam.', 'ThinQ app.'],
+     benefits:['Bersih 30% lebih, auto open dry.']},
+    {cat:'dishwasher',model:'DFC335HM',name:'QuadWash Matte Black',poster:'assets/img/dishwasher/DFC335HM.jpg',
+     price:'RM150 / bulan', desc:'Auto open door.',
+     specs:['Dual Zone.', 'EasyRack Plus.'],
+     benefits:['Kering natural, fleksibel rak.']},
+    // Vacuum
+    {cat:'vacuum',model:'A9T-RMAX',name:'CordZero Tower',poster:'assets/img/vacuum/A9T-RMAX.jpg',
+     price:'RM180 / bulan', desc:'All-in-one tower.',
+     specs:['Auto Empty.', 'PowerDrive Nozzle.'],
+     benefits:['Kosong habuk auto.']},
+    {cat:'vacuum',model:'A9X-RSTEAM',name:'CordZero Steam Mop',poster:'assets/img/vacuum/A9X-RSTEAM.jpg',
+     price:'RM260 / bulan', desc:'Vacuum + mop steam.',
+     specs:['Allergy Care.', 'Steam Nozzle.'],
+     benefits:['Lantai kilat, kurang kuman.']},
+    {cat:'vacuum',model:'A9T-RMAX',name:'All-in-One',poster:'assets/img/vacuum/A9T-RMAX.jpg',
+     price:'RM90 / bulan', desc:'Standard cordless.',
+     specs:['2 bateri.', 'Total Care Kit.'],
+     benefits:['90 min runtime.']},
+    // Dehumidifier
+    {cat:'dehumidifier',model:'DD16GMWEE',name:'16L Smart',poster:'assets/img/dehumidifier/DD16GMWEE.jpg',
+     price:'RM140 / bulan', desc:'Kawal lembapan.',
+     specs:['Auto Defrost.', 'Laundry Mode.'],
+     benefits:['Elak kulapuk musim hujan.']},
+    {cat:'dehumidifier',model:'DD16GME1',name:'16L Standard',poster:'assets/img/dehumidifier/DD16GME1.jpg',
+     price:'RM220 / bulan', desc:'Dengan hose drain.',
+     specs:['Continuous Drain.', 'Ionizer.'],
+     benefits:['Tak perlu kosong tangki.']},
+    {cat:'dehumidifier',model:'DD16GM',name:'16L Dual Inverter',poster:'assets/img/dehumidifier/DD16GM.jpg',
+     price:'RM70 / bulan', desc:'Inverter senyap.',
+     specs:['Smart Control.', 'Bucket Full Alert.'],
+     benefits:['Jimat 40% tenaga.']},
+  ];
+  PRODUCTS.forEach((p,i)=>p._idx=i);
+  // Render Functions
+  function makeCard(p){
+    const msg = encodeURIComponent(`Hi Hasrin, saya berminat LG ${p.model} (${p.name}) — ${p.price}.`);
+    return `
+      <article class="card">
+        <div class="poster">
+          <picture>
+            <source srcset="${p.poster} 1x" media="(min-width: 768px)">
+            <img src="${p.poster}" alt="LG ${p.model} ${p.name}">
+          </picture>
+        </div>
+        <div class="body">
+          <div class="cat-label">${ICONS[p.cat]||'✨'} ${p.cat.replace('-', ' ').toUpperCase()}</div>
+          <div class="model">${p.model} — ${p.name}</div>
+          <div class="price">${p.price} <small>Langganan bulanan</small></div>
+          <div class="card-cta">
+            <a class="btn sm wa" target="_blank" rel="noopener" href="${WA_LINK}&text=${msg}">WhatsApp</a>
+            <button class="btn sm" type="button" data-action="detail" data-idx="${p._idx}">Butiran</button>
+            <button class="btn sm outline-soft" type="button" data-action="order" data-model="${p.model}">Order</button>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+  function renderSections(){
+    const productSections = document.getElementById('productSections');
+    productSections.innerHTML = CATEGORY_ORDER.map(([id,label])=>{
+      const items = PRODUCTS.filter(p=>p.cat===id);
+      if(!items.length) return '';
+      return `
+        <section class="cat-section" id="cat-${id}">
+          <div class="cat-heading" onclick="toggleCat('${id}')">
+            <h2>${label}</h2>
+            <small>${ICONS[id]||'•'} ${items.length} model tersedia <span style="font-size:10px;">▼</span></small>
+          </div>
+          <div class="grid ${id}" style="display:block;">
+            ${items.map(makeCard).join('')}
+          </div>
+        </section>
+      `;
+    }).join('');
+  }
+  function toggleCat(id) {
+    const grid = document.querySelector(`#cat-${id} .grid`);
+    grid.classList.toggle('hidden');
+  }
+  renderSections();
+  // Modal
+  const modal = document.getElementById('modal');
+  const mTitle = document.getElementById('m-title');
+  const mPrice = document.getElementById('m-price');
+  const mTags = document.getElementById('m-tags');
+  const mDesc = document.getElementById('m-desc');
+  const mSpecs = document.getElementById('m-specs');
+  const mWa = document.getElementById('m-wa');
+  let currentProduct = null;
+  function toggleModal(show) { modal.classList.toggle('open', !!show); if (show) modal.focus(); }
+  function showDetails(idx){
+    const p = PRODUCTS[idx]; if(!p) return;
+    currentProduct = p;
+    mTitle.textContent = `${p.model} — ${p.name}`;
+    mPrice.textContent = `${p.price}`;
+    mTags.innerHTML = `<span class="chip">${p.cat.replace('-', ' ').toUpperCase()}</span>`;
+    mDesc.textContent = p.desc;
+    mSpecs.innerHTML = (p.specs||[]).map(s=>`<li>${s}</li>`).join('') + (p.benefits||[]).map(b=>`<li><b>✓</b> ${b}</li>`).join('');
+    const msg = encodeURIComponent(`Hi Hasrin, saya nak detail untuk LG ${p.model} (${p.name}) — ${p.price}.`);
+    mWa.href = `${WA_LINK}&text=${msg}`;
+    toggleModal(true);
+  }
+  function prefillOrder(model){ document.getElementById('order_model').value = model || ''; window.location.hash = '#order'; }
+  function prefillOrderFromModal(){ if(currentProduct) prefillOrder(currentProduct.model); }
+  // Events
+  document.getElementById('productSections').addEventListener('click', (e)=>{
+    const btn = e.target.closest('button[data-action]');
+    if(!btn) return;
+    const action = btn.dataset.action;
+    if(action==='detail'){ showDetails(Number(btn.dataset.idx)); }
+    else if(action==='order'){ prefillOrder(btn.dataset.model); }
+  });
+  modal.addEventListener('click', e=>{ if(e.target===modal) toggleModal(false); });
+  // Forms
+  function submitOrder(e){
+    e.preventDefault();
+    const f = e.target;
+    const msg = encodeURIComponent(`ORDER LG Subscribe\nModel: ${f.model.value}\nNama: ${f.nama.value}\nPhone: ${f.phone.value}\nPhone2: ${f.phone2.value||'-'}\nAlamat: ${f.alamat.value}\nEmail: ${f.email.value}\nWarna: ${f.warna.value||'-'}\nMohon proses langganan.`);
+    window.open(`${WA_LINK}&text=${msg}`, '_blank');
+    f.reset();
+  }
+  function submitCrew(e){
+    e.preventDefault();
+    const f = e.target;
+    const msg = encodeURIComponent(`Hi Hasrin, nak sertai VYBE CREW.\nNama: ${f.nama.value}\nPhone: ${f.phone.value}\nPengalaman: ${f.pengalaman.value||'-'}\nSebab: ${f.sebab.value||'-'}`);
+    window.open(`${WA_LINK}&text=${msg}`, '_blank');
+    f.reset();
+  }
+  // Float Label
+  const floatLabel = document.getElementById('floatLabel');
+  window.addEventListener('scroll',()=>{
+    const y = window.scrollY, h = document.body.scrollHeight, b = y + window.innerHeight;
+    if(y<300) floatLabel.textContent = '🔍 Semak model LG Subscribe yang anda minat.';
+    else if(b < h - 250) floatLabel.textContent = '💬 Perlukan bantuan pilih model? Klik WhatsApp.';
+    else floatLabel.textContent = '🚀 Sedia untuk langgan? Tekan WhatsApp sekarang.';
+  });
+  // AYRA
+  const aiToggle = document.getElementById('aiToggle');
+  const aiPanel = document.getElementById('aiPanel');
+  const aiBody = document.getElementById('aiBody');
+  const aiInput = document.getElementById('aiInput');
+  const aiSend = document.getElementById('aiSend');
+  aiToggle.addEventListener('click',()=>aiPanel.classList.toggle('open'));
+  aiSend.addEventListener('click',handleAi);
+  aiInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();handleAi();}});
+  function addAiMsg(html,me=false){
+    const div = document.createElement('div');
+    div.className = 'ai-msg' + (me ? ' me' : '');
+    div.innerHTML = html;
+    aiBody.appendChild(div);
+    aiBody.scrollTop = aiBody.scrollHeight;
+  }
+  function handleAi(){
+    const q = aiInput.value.trim(); if(!q) return;
+    addAiMsg(q,true);
+    const num = q.match(/(\d{2,4})/); const budget = num ? +num[1] : null;
+    const kw = q.toLowerCase();
+    let cat = null;
+    for(const [id,label] of CATEGORY_ORDER){
+      if(kw.includes(id.split('-')[0]) || kw.includes(label.toLowerCase().split(' ')[0])){ cat = id; break; }
+    }
+    let picks = PRODUCTS.filter(p=>!cat || p.cat===cat);
+    if(budget){ picks = picks.filter(p=>{ const m = p.price.match(/(\d{2,4})/); return m ? (+m[1] <= budget) : true; }); }
+    if(!picks.length){ addAiMsg('Cuba taip contoh: <b>"fridge RM120"</b>.'); aiInput.value=''; return; }
+    const reply = picks.slice(0,4).map(p=>{
+      const msg = encodeURIComponent(`Hi Hasrin, berminat LG ${p.model} (${p.name}) — ${p.price}.`);
+      return `<div style="margin-top:6px;border-top:1px solid rgba(30,41,59,.9);padding-top:6px"><b>${p.model} — ${p.name}</b><br><small>${p.price}</small><div style="margin-top:6px;display:flex;gap:6px"><button class="btn sm" type="button" onclick="prefillOrder('${p.model}')">Order</button><button class="btn sm primary" type="button" onclick="showDetails(${p._idx})">Butiran</button><a class="btn sm wa" target="_blank" href="${WA_LINK}&text=${msg}">WhatsApp</a></div></div>`;
+    }).join('');
+    addAiMsg('Model sesuai: ' + reply);
+    aiInput.value = '';
+  }
+</script>
 </body>
 </html>
